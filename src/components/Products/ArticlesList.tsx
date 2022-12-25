@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material'
-import ProductsListItem from './ProductsListItem'
+import ArticlesListItem from './ArticlesListItem'
 import productsArray from 'utils/productsArray'
 
 type Props = {}
@@ -20,7 +20,7 @@ type Props = {}
 
 //  {products_from_array}
 
-const ProductsList = (props: Props) => {
+const ArticlesList = (props: Props) => {
     return (
         <>
             <Grid
@@ -31,13 +31,12 @@ const ProductsList = (props: Props) => {
                 spacing={4}
             >
                 {productsArray.map((i) => (
-                    <Grid item xs={12} sm={6} md={4}>
-                        <ProductsListItem
+                    <Grid item xs={12} sm={6} md={6}>
+                        <ArticlesListItem
                             title={i.title}
-                            desc={i.desc}
-                            type={i.type}
-                            capacity={i.capacity}
-                            price={i.price}
+                            category={i.category}
+                            date={i.date}
+                            comments={i.comments}
                         />
                     </Grid>
                 ))}
@@ -46,4 +45,4 @@ const ProductsList = (props: Props) => {
     )
 }
 
-export default ProductsList
+export default ArticlesList

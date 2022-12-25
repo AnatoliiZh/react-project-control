@@ -1,21 +1,22 @@
 import { Typography } from '@mui/material'
-import ProductsList from 'components/Products/ProductsList'
+import ArticlesList from 'components/Products/ArticlesList'
 
 type Props = {}
 const Home = (props: Props) => {
     return (
         <>
             <Typography
-                variant="h4"
-                component="h1"
-                align="center"
+                align="left"
+                component="h2"
                 sx={{
                     marginBottom: '30px',
+                    fontFamily: 'Syne',
+                    fontSize: '30px',
                 }}
             >
-                List of Products{''}
+                Popular Stories{''}
             </Typography>
-            <ProductsList />
+            <ArticlesList />
         </>
     )
 }

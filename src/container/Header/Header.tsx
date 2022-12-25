@@ -15,6 +15,7 @@ import { FaInstagram } from 'react-icons/fa'
 // import { green } from '@mui/material/colors'
 import './Header.scss'
 import Container from '@mui/material/Container'
+import Menu from 'components/Menu/Menu'
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     alignItems: 'flex-start',
@@ -22,7 +23,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     paddingBottom: theme.spacing(2),
     // Override media queries injected by theme.mixins.toolbar
     '@media all': {
-        minHeight: 150,
+        minHeight: 60,
     },
 }))
 
@@ -35,11 +36,15 @@ const Header = (props: Props) => {
                 style={{
                     backgroundColor: 'white',
                     color: 'brown',
-                    padding: '0 50px',
+                    padding: '30px 0 ',
                 }}
             >
                 <Container maxWidth="lg">
-                    <StyledToolbar>
+                    <StyledToolbar
+                        style={{
+                            margin: '0 0 20px 0',
+                        }}
+                    >
                         <Box
                             component="div"
                             sx={{
@@ -61,7 +66,7 @@ const Header = (props: Props) => {
                                 style={{
                                     height: '28px',
                                     width: '28px',
-                                    padding: '8px',
+                                    padding: '7px',
                                 }}
                             />
                         </Box>
@@ -87,7 +92,7 @@ const Header = (props: Props) => {
                                 style={{
                                     height: '28px',
                                     width: '28px',
-                                    padding: '8px',
+                                    padding: '7px',
                                 }}
                             />
                         </Box>
@@ -113,7 +118,7 @@ const Header = (props: Props) => {
                                 style={{
                                     height: '28px',
                                     width: '28px',
-                                    padding: '8px',
+                                    padding: '7px',
                                 }}
                             />
                         </Box>
@@ -150,6 +155,7 @@ const Header = (props: Props) => {
                             <SearchIcon />
                         </IconButton>
                     </StyledToolbar>
+                    <Menu />
                 </Container>
             </AppBar>
         </>

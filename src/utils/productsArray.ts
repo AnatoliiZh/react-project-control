@@ -1,53 +1,34 @@
 type ProductProps = {
     title: string
-    desc: string
-    type: string
-    capacity: string
-    price: number
+    category: string
+    date: string
+    comments: number
 }
 
 const productsArray:ProductProps[] = [
     {
-    title: "Iphone 14",
-    desc: "bla-bla",
-    type: "phone",
-    capacity: "64",
-    price: 500
+    title: "Meditation as Medicine on the Rise – Fitness",
+    category: "Health",
+    date: "Mar 6, 2022",
+    comments: 0
     },
     {
-        title: "Iphone 12",
-        desc: "bla-bla",
-        type: "phone",
-        capacity: "128",
-        price: 1500
+        title: "Cute Pastel Outfit Combinations and Ideas to Wear Pastel",
+    category: "Fashion",
+    date: "Mar 6, 2022",
+    comments: 0
     },
     {
-        title: "Iphone 13",
-        desc: "bla-bla",
-        type: "phone",
-        capacity: "32",
-        price: 250
+        title: "It Really Have Good Feeling When You Enjoy Nature",
+    category: "Lifestyle",
+    date: "Mar 6, 2022",
+    comments: 0
     },
     {
-        title: "Iphone 6",
-        desc: "bla-bla",
-        type: "phone",
-        capacity: "16",
-        price: 60
-    },
-    {
-        title: "Iphone 5",
-        desc: "bla-bla",
-        type: "phone",
-        capacity: "16",
-        price: 50
-    },
-    {
-        title: "Iphone 8",
-        desc: "bla-bla",
-        type: "phone",
-        capacity: "16",
-        price: 80
+        title: "10 Ways To Meet More People While Traveling Alone",
+    category: "Travel",
+    date: "Mar 6, 2022",
+    comments: 0
     }
 ]
 

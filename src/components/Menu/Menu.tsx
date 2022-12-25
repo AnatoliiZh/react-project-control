@@ -4,11 +4,15 @@ type Props = {}
 const Menu = (props: Props) => {
     return (
         <>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">Products</Button>
-            <Button color="inherit">Shipping</Button>
-            <Button color="inherit">Payment</Button>
-            <Button color="inherit">Cart</Button>
+            <div className="menu">
+                <Button className="menu_items">Home</Button>
+                <Button className="menu_items">Fashion</Button>
+                <Button className="menu_items">Health</Button>
+                <Button className="menu_items">Lifestyle</Button>
+                <Button className="menu_items">Travel</Button>
+                <Button className="menu_items">Features</Button>
+                <Button className="menu_items">Shop</Button>
+            </div>
         </>
     )
 }
