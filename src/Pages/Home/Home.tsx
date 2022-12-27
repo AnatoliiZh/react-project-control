@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material'
-import ArticlesList from 'components/Products/ArticlesList'
+import ArticlesList from 'components/Articles/ArticlesList'
 
 type Props = {}
 const Home = (props: Props) => {
