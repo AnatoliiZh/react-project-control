@@ -28,7 +28,7 @@ const ArticlesListItem = ({
             sx={{
                 backgroundImage: `url(${image})`,
                 backgroundSize: 'cover',
-                backgroundPositionY: '-120px',
+                backgroundPositionY: '0px',
             }}
         >
             <CardContent

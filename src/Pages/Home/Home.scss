@@ -1,0 +1,12 @@
+.row{
+    display: flex;
+    
+    .col-1{
+        width: 66%;
+        
+    }
+    .col-2{
+        width: 33%;
+        padding: 20px;
+    }
+}
