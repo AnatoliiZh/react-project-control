@@ -48,6 +48,12 @@ const App = (props: Props) => {
                 <SwiperSlide>
                     <img src="/images/4.webp" alt="слайд 4" />
                 </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/images/5.webp" alt="слайд 5" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/images/6.webp" alt="слайд 6" />
+                </SwiperSlide>
             </Swiper>
             <Main />
         </StyledEngineProvider>
