@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Card, CardContent } from '@mui/material'
 // import Typography from '@mui/material/Typography'
 // import CardMedia from '@mui/material/CardMedia'
@@ -9,6 +10,7 @@ import './ArticlesListItem.scss'
 import { FaRegClock } from 'react-icons/fa'
 import { FaRegCommentAlt } from 'react-icons/fa'
 import { FaRegHeart } from 'react-icons/fa'
+import { FaHeart } from 'react-icons/fa'
 
 type Props = {
     title: string
@@ -25,6 +27,11 @@ const ArticlesListItem = ({
     comments,
     image,
 }: Props) => {
+    const [like, setLike] = useState<boolean>(false)
+
+    const onLikeClick = () => {
+        setLike((prevState: boolean) => !prevState)
+    }
     return (
         <Card
             className="article"
@@ -52,7 +59,15 @@ const ArticlesListItem = ({
                         <FaRegCommentAlt className="icons" />
                         <div className="article-comments">{comments}</div>
                     </div>
-                    <FaRegHeart className="icons" />
+                    <div onClick={() => onLikeClick()}>
+                        <div>
+                            {like ? (
+                                <FaHeart className="icons" />
+                            ) : (
+                                <FaRegHeart className="icons" />
+                            )}
+                        </div>
+                    </div>
                 </div>
             </CardContent>
         </Card>
