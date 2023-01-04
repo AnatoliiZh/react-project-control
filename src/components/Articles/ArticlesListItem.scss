@@ -1,5 +1,5 @@
-.article {
-    // padding: 30px 0;
+.article {    
+    // background: linear-gradient(to top, rgb(66, 66, 66), 10%, transparent);
     
     .article-title {
         text-align: left;
@@ -8,10 +8,8 @@
         font-family: Syne;
         text-decoration: none;
         color: white;
-        // padding: 0 20px;
+        // padding: 10px 0;      
         
-        // font-weight: bold;
-        // margin-bottom: 15px;
     }
     .article-title:hover {
         color: #bd9b84;
@@ -19,27 +17,47 @@
         
     }
     .cat-date-com{
-        padding: 0 20px;
+        // padding: 0 5px;
         display: flex;
-        background-color: rgba(34, 34, 34, 0.377);
+        align-items: center;
+        // background-color: rgba(34, 34, 34, 0.377);
     }
-    .article-category,.article-date, .article-price {
+    .article-category,.article-date {
         font-size: 14px;
         margin-right: 15px;
         font-family: Manrope;
+        text-decoration: none;
     }
-    .article-category{
+    .article-category, .icons{
         color: #bd9b84;
     }
 
     .article-date {
+        color: white;
         font-size: 14px;
         margin-right: 15px;    
     }
+ 
     
-    .article-price {
-        font-size: 14px;    
+    .article-comments {
+        font-size: 14px;   
+        color: white; 
     }
     
+    .icons{
+        height: 14px;
+        width: 14px;
+        margin-right: 10px;
+    }
+    .icons:last-child{
+        margin-right: 0;
+    }
+
+    .under-title{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+    }
 }
 
