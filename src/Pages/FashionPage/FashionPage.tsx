@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from '@mui/material'
-import './FashionPage.scss'
+import 'Pages/Pages.scss'
 
 type Props = {}
 

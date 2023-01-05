@@ -18,7 +18,7 @@ const Home = (props: Props) => {
         <>
             <Swiper
                 slidesPerView={3}
-                spaceBetween={70}
+                spaceBetween={20}
                 slidesPerGroup={3}
                 loop={true}
                 loopFillGroupWithBlank={true}
