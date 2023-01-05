@@ -1,0 +1,40 @@
+.most-read{
+
+    margin-left: 10px;
+    margin-bottom: 30px;
+    
+    .most-read-heading{
+        font-family: Syne;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 38px;
+        color: #000;         
+    }
+    .most-read-item{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;      
+    }
+    .most-read-item-text{
+        margin-left: 30px;
+    }
+    .title2{
+        font-family: "Syne", Sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1em;
+    }
+    .under-title{
+        display: flex;
+        align-items: center;      
+        margin-top: 10px;
+        .icons{
+            color: #bd9b84;
+            margin-right: 10px;
+        }
+        .date{
+            margin-right: 30px;
+        }
+    
+    }
+}

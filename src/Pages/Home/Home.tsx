@@ -11,6 +11,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper'
+import MostRead from 'components/MostRead/MostRead'
 
 type Props = {}
 const Home = (props: Props) => {
@@ -69,10 +70,7 @@ const Home = (props: Props) => {
                         <ArticlesList />
                     </Grid>
                     <Grid item xs={4}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nihil fuga quasi dolor earum amet nisi repellendus
-                        debitis nam, quae est eligendi voluptas veritatis dicta
-                        ratione sunt magni dignissimos autem repudiandae.
+                        <MostRead />
                     </Grid>
                 </Grid>
             </Container>

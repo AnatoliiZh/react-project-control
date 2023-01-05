@@ -1,5 +1,7 @@
 .article {    
     // background: linear-gradient(to top, rgb(66, 66, 66), 10%, transparent);
+    position: relative;
+        
     
     .article-title {
         text-align: left;
@@ -8,7 +10,9 @@
         font-family: Syne;
         text-decoration: none;
         color: white;
-        // padding: 10px 0;      
+        position: absolute;
+        bottom: 90px;
+        padding: 0 30px;      
         
     }
     .article-title:hover {
@@ -17,6 +21,9 @@
         
     }
     .cat-date-com{
+        position: absolute;
+        bottom: 60px;
+        padding: 0 30px; 
         // padding: 0 5px;
         display: flex;
         align-items: center;
@@ -28,7 +35,7 @@
         font-family: Manrope;
         text-decoration: none;
     }
-    .article-category, .icons{
+    .article-category, .icons, .like{
         color: #bd9b84;
     }
 
@@ -45,19 +52,17 @@
     }
     
     .icons{
+        
+        // padding: 0 30px; 
         height: 14px;
         width: 14px;
         margin-right: 10px;
     }
-    .icons:last-child{
-        margin-right: 0;
+    .like{
+        position: absolute;
+        bottom: 60px;
+        right: 30px;
     }
-
-    .under-title{
-        margin-top: 10px;
-        display: flex;
-        justify-content: space-between;
-        color: white;
-    }
+    
 }
 
