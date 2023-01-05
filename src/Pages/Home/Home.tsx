@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material'
 import ArticlesList from 'components/Articles/ArticlesList'
 import { Grid } from '@mui/material'
-import './Home'
+import './Home.scss'
 import { Container } from '@mui/material'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -18,7 +18,7 @@ const Home = (props: Props) => {
         <>
             <Swiper
                 slidesPerView={3}
-                spaceBetween={30}
+                spaceBetween={70}
                 slidesPerGroup={3}
                 loop={true}
                 loopFillGroupWithBlank={true}
@@ -34,16 +34,16 @@ const Home = (props: Props) => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <img src="/images/1.webp" alt="слайд 1" />
+                    <img src="/images/1crop.webp" alt="слайд 1" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="/images/2.webp" alt="слайд 2" />
+                    <img src="/images/2crop.webp" alt="слайд 2" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="/images/3.webp" alt="слайд 3" />
+                    <img src="/images/3crop.webp" alt="слайд 3" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="/images/4.webp" alt="слайд 4" />
+                    <img src="/images/4crop.webp" alt="слайд 4" />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src="/images/5.webp" alt="слайд 5" />
