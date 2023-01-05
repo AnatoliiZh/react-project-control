@@ -1,13 +1,14 @@
 import React from 'react'
 import { Container } from '@mui/material'
+import 'Pages/Pages.scss'
 
 type Props = {}
 
 const HealthPage = (props: Props) => {
     return (
-        <div>
-            <Container maxWidth="lg">HealthPage</Container>
-        </div>
+        <Container maxWidth="lg">
+            <div className="title">Category : Health</div>
+        </Container>
     )
 }
 
