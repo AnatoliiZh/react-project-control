@@ -52,7 +52,7 @@ const Home = (props: Props) => {
                     <img src="/images/6.webp" alt="слайд 6" />
                 </SwiperSlide>
             </Swiper>
-            <Container maxWidth="lg" sx={{ padding: '50px 0' }}>
+            <Container maxWidth="xl" sx={{ padding: '50px 0' }}>
                 <Typography
                     align="left"
                     component="h2"

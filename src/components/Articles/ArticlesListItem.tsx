@@ -36,19 +36,20 @@ const ArticlesListItem = ({
         <Card
             className="article"
             variant="outlined"
-            sx={{
-                backgroundImage: `linear-gradient(to top, black, 10%, transparent 20%), url(${image})`,
-                backgroundSize: 'cover',
-                backgroundPositionY: '0px',
-                border: 'none',
-                borderRadius: '0px',
-            }}
+            // sx={{
+            //     backgroundImage: `linear-gradient(to top, black, 10%, transparent 20%), url(${image})`,
+            //     backgroundSize: 'cover',
+            //     backgroundPositionY: '0px',
+            //     border: 'none',
+            //     borderRadius: '0px',
+            // }}
         >
             <CardContent
-                sx={{
-                    paddingTop: '400px',
-                }}
+            // sx={{
+            //     paddingTop: '400px',
+            // }}
             >
+                <img src={image} width="100%" alt="" />
                 <div className="article-title">{title}</div>
                 <div className="under-title">
                     <div className="cat-date-com">

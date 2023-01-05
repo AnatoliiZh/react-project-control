@@ -14,7 +14,7 @@ const articlesArray:ArticleProps[] = [
     category: "Health",
     date: "Mar 6, 2022",
     comments: 0,
-    image:"/images/1.webp"
+    image:"/images/1crop.webp"
     },
     {
         id:2,
@@ -22,7 +22,7 @@ const articlesArray:ArticleProps[] = [
     category: "Fashion",
     date: "Mar 6, 2022",
     comments: 0,
-    image:"/images/2.webp"
+    image:"/images/2crop.webp"
     },
     {
         id:3,
@@ -30,7 +30,7 @@ const articlesArray:ArticleProps[] = [
     category: "Lifestyle",
     date: "Mar 6, 2022",
     comments: 0,
-    image:"/images/3.webp"
+    image:"/images/3crop.webp"
     },
     {
         id:4,
@@ -38,7 +38,7 @@ const articlesArray:ArticleProps[] = [
     category: "Travel",
     date: "Mar 6, 2022",
     comments: 0,
-    image:"/images/4.webp"
+    image:"/images/4crop.webp"
     }
 ]
 
