@@ -60,13 +60,11 @@ const ArticlesListItem = ({
                         <div className="article-comments">{comments}</div>
                     </div>
                     <div onClick={() => onLikeClick()}>
-                        <div>
-                            {like ? (
-                                <FaHeart className="icons" />
-                            ) : (
-                                <FaRegHeart className="icons" />
-                            )}
-                        </div>
+                        {like ? (
+                            <FaHeart className="icons" />
+                        ) : (
+                            <FaRegHeart className="icons" />
+                        )}
                     </div>
                 </div>
             </CardContent>

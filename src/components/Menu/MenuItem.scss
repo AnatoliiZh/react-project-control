@@ -1,0 +1,18 @@
+.nav-active {   
+    color: #bd9b84;
+}
+
+.nav-item {
+    color: black;
+    
+}
+
+.nav-item, .nav-active{
+    width: 90px;
+    text-align: center;
+    text-decoration: none;
+    // margin: 0 20px;   
+    font-family: Manrope;
+    font-size: 17px;
+    text-transform: capitalize;
+}

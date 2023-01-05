@@ -3,13 +3,13 @@ import Header from '../Header/Header'
 import { StyledEngineProvider } from '@mui/material/styles'
 import Main from 'container/Main/Main'
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-// Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
-// import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper'
+// import { Swiper, SwiperSlide } from 'swiper/react'
+// // Import Swiper styles
+// import 'swiper/css'
+// import 'swiper/css/pagination'
+// import 'swiper/css/navigation'
+// // import required modules
+// import { Autoplay, Pagination, Navigation } from 'swiper'
 
 import './App.scss'
 
@@ -19,7 +19,7 @@ const App = (props: Props) => {
         <StyledEngineProvider injectFirst>
             <CssBaseline />
             <Header />
-            <Swiper
+            {/* <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
                 slidesPerGroup={3}
@@ -54,7 +54,7 @@ const App = (props: Props) => {
                 <SwiperSlide>
                     <img src="/images/6.webp" alt="слайд 6" />
                 </SwiperSlide>
-            </Swiper>
+            </Swiper> */}
             <Main />
         </StyledEngineProvider>
     )
