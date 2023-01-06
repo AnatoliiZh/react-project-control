@@ -1,9 +1,9 @@
 import React from 'react'
-import './MostRead.scss'
+import './MostRead2.scss'
 // import { FaRegClock } from 'react-icons/fa'
 // import { FaRegCommentAlt } from 'react-icons/fa'
 import MostReadItem from './MostReadItem'
-import MostReadArray from 'utils/mostReadArray'
+import MostReadArray2 from 'utils/mostReadArray2'
 
 type MostReadProps = {
     id: number
@@ -18,9 +18,9 @@ type Props = {}
 
 const MostRead = (props: Props) => {
     return (
-        <div className="most-read">
-            <div className="most-read-heading">Most Read</div>
-            {MostReadArray.map(
+        <div className="most-read2">
+            <div className="most-read-heading2">Most Read</div>
+            {MostReadArray2.map(
                 ({
                     id,
                     title,
