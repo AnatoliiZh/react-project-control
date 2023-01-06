@@ -65,4 +65,20 @@
     }
     
 }
-
+.gradient {
+	display: inline-block;
+	position: relative;    
+	line-height: 0;
+}
+.gradient:after {
+	content: "";
+	display: block;    
+	width: 100%;
+	height: 100%;    
+	position: absolute;
+	top: 0;      
+	left: 0;   
+	background: transparent;
+	background-image: linear-gradient(to top, black, 10%, transparent 20%);
+	opacity: 0.8;
+}

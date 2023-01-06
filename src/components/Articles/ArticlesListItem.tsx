@@ -46,7 +46,9 @@ const ArticlesListItem = ({
                     // borderRadius: '0px',
                 }}
             >
-                <img src={image} width="100%" alt="" />
+                <div className="gradient">
+                    <img src={image} width="100%" alt="" />
+                </div>
 
                 <div className="article-title">{title}</div>
                 <div className="under-title">
