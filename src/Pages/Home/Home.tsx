@@ -12,6 +12,7 @@ import 'swiper/css/navigation'
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper'
 import MostRead from 'components/MostRead/MostRead'
+import Social from 'components/Social/Social'
 
 type Props = {}
 const Home = (props: Props) => {
@@ -71,6 +72,7 @@ const Home = (props: Props) => {
                     </Grid>
                     <Grid item xs={4}>
                         <MostRead />
+                        <Social />
                     </Grid>
                 </Grid>
             </Container>
