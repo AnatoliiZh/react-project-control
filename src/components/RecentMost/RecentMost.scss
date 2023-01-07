@@ -38,6 +38,7 @@
         align-items: center;      
         margin-top: 20px;
         font-size: 14px;
+        color:#797171;
         img{
             border-radius: 50%;
         }
@@ -47,16 +48,13 @@
             color: #bd9b84;
             margin-left: 10px;
             margin-right: 45px;
-
         }
         .icons{
             color: #bd9b84;
             margin-right: 10px;
         }
-        .recent-date, .recent-comments{
-            
+        .recent-date, .recent-comments{            
             margin-right: 45px;
-        }
-    
+        }    
     }
 }

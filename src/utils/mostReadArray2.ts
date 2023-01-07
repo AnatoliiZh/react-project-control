@@ -30,7 +30,7 @@ const MostReadArray2:MostReadProps[] = [
     category: "Travel",
     date: "Mar 6, 2022",
     comments: 0,
-    image:"/images/4crop.webp"
+    image:"/images/4mr_crop.webp"
     },
     {
         id:1,
