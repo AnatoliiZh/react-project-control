@@ -15,15 +15,24 @@ type MostReadProps = {
 }
 
 type Props = {
-    start: number
-    end: number
+    id1: number //number id of idicle
+    id2: number
+    id3: number
+    id4: number
 }
 
-const MostRead = ({ start, end }: Props) => {
+const MostRead = ({ id1, id2, id3, id4 }: Props) => {
     return (
         <div className="most-read">
             <div className="most-read-heading">Most Read</div>
-            {MostReadArray.slice(start, end).map(
+            {/* {MostReadArray.slice(start, end).map( */}
+            {MostReadArray.filter(
+                (filtered) =>
+                    filtered.id === id1 ||
+                    filtered.id === id2 ||
+                    filtered.id === id3 ||
+                    filtered.id === id4
+            ).map(
                 ({
                     id,
                     title,

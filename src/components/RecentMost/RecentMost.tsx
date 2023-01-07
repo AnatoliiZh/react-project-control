@@ -76,7 +76,7 @@ const RecentMost = (props: Props) => {
                     </div>
                 </Grid>
                 <Grid item xs={4}>
-                    <MostRead start={4} end={8} />
+                    <MostRead id1={5} id2={6} id3={7} id4={8} />
                 </Grid>
             </Grid>
         </div>

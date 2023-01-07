@@ -72,7 +72,7 @@ const Home = (props: Props) => {
                         <ArticlesList />
                     </Grid>
                     <Grid item xs={4}>
-                        <MostRead start={0} end={4} />
+                        <MostRead id1={1} id2={2} id3={3} id4={4} />
                         <Social />
                     </Grid>
                 </Grid>
