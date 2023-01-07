@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid } from '@mui/material'
-import MostRead2 from 'components/MostRead/MostRead2'
+import MostRead from 'components/MostRead/MostRead'
 import { FaRegClock } from 'react-icons/fa'
 import { FaRegCommentAlt } from 'react-icons/fa'
 import './RecentMost.scss'
@@ -76,7 +76,7 @@ const RecentMost = (props: Props) => {
                     </div>
                 </Grid>
                 <Grid item xs={4}>
-                    <MostRead2 />
+                    <MostRead start={4} end={8} />
                 </Grid>
             </Grid>
         </div>
