@@ -77,6 +77,9 @@ const Home = (props: Props) => {
                     </Grid>
                 </Grid>
                 <RecentMost />
+                <div className="banner">
+                    <img src="/images/banner.jpg" width="" alt="ads" />
+                </div>
             </Container>
         </>
     )
