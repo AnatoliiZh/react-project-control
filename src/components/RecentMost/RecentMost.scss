@@ -37,6 +37,7 @@
         display: flex;
         align-items: center;      
         margin-top: 20px;
+        font-size: 14px;
         img{
             border-radius: 50%;
         }
@@ -52,7 +53,8 @@
             color: #bd9b84;
             margin-right: 10px;
         }
-        .recent-date{
+        .recent-date, .recent-comments{
+            
             margin-right: 45px;
         }
     

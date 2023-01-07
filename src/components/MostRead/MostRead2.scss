@@ -22,12 +22,13 @@
         font-family: "Syne", Sans-serif;
         font-size: 20px;
         font-weight: 700;
-        line-height: 1em;
+        // line-height: 1em;
     }
     .under-title{
         display: flex;
         align-items: center;      
         margin-top: 10px;
+        font-size: 14px;
         .icons{
             color: #bd9b84;
             margin-right: 10px;

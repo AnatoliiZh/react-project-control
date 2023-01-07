@@ -9,6 +9,8 @@ import { FaRegCommentAlt } from 'react-icons/fa'
 import { FaRegHeart } from 'react-icons/fa'
 import { FaHeart } from 'react-icons/fa'
 
+import LinkItem from 'components/LinkItem/LinkItem'
+
 type Props = {
     title: string
     category: string
@@ -53,10 +55,8 @@ const ArticlesListItem = ({
                 <div className="article-title">{title}</div>
                 <div className="under-title">
                     <div className="cat-date-com">
-                        <div className="article-category">{category}</div>
-                        {/* <Routes>                
-                            <Route path="fashion" element={<FashionPage />} />
-                        </Routes> */}
+                        {/* <div className="article-category">{category}</div> */}
+                        <LinkItem to={`/${category}`}>{category}</LinkItem>
 
                         <FaRegClock className="icons" />
                         <div className="article-date">{date}</div>

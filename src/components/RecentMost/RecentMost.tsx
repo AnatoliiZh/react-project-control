@@ -70,7 +70,7 @@ const RecentMost = (props: Props) => {
                                 <FaRegClock className="icons" />
                                 <div className="recent-date">Mar 6, 2022</div>
                                 <FaRegCommentAlt className="icons" />
-                                <div className="article-comments">0</div>
+                                <div className="recent-comments">0</div>
                             </div>
                         </div>
                     </div>
