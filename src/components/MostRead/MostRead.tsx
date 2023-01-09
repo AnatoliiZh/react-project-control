@@ -47,6 +47,7 @@ const MostRead = ({ id1, id2, id3, id4 }: Props) => {
                         date={date}
                         comments={comments}
                         image={image}
+                        key={id}
                     />
                 )
             )}

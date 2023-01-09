@@ -14,6 +14,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper'
 import MostRead from 'components/MostRead/MostRead'
 import Social from 'components/Social/Social'
 import RecentMost from 'components/RecentMost/RecentMost'
+import Slider from 'components/Slider/Slider'
 
 type Props = {}
 const Home = (props: Props) => {
@@ -80,6 +81,7 @@ const Home = (props: Props) => {
                 <div className="banner">
                     <img src="/images/banner.jpg" width="" alt="ads" />
                 </div>
+                <Slider />
             </Container>
         </>
     )
