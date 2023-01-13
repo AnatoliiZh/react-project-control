@@ -39,7 +39,15 @@ const articlesArray:ArticleProps[] = [
         date: "Mar 6, 2022",
         comments: 0,
         image:"/images/4crop.webp"
-    }
+    },
+    {
+        id:5,
+        title: "Cute Pastel Outfit Combinations and Ideas to Wear Pastel 22222",
+        category: "Fashion",
+        date: "Mar 6, 2022",
+        comments: 0,
+        image:"/images/4crop.webp"
+    }    
 ]
 
 export default articlesArray

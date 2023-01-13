@@ -23,26 +23,28 @@ const ArticlesList = (props: Props) => {
                 alignItems="center"
                 spacing={4}
             >
-                {articlesArray.map(
-                    ({
-                        id,
-                        title,
-                        category,
-                        date,
-                        comments,
-                        image,
-                    }: ArticleProps) => (
-                        <Grid item xs={12} sm={6} md={6} key={id}>
-                            <ArticlesListItem
-                                title={title}
-                                category={category}
-                                date={date}
-                                comments={comments}
-                                image={image}
-                            />
-                        </Grid>
-                    )
-                )}
+                {articlesArray
+                    .filter((filtered) => filtered.id >= 1 && filtered.id <= 4)
+                    .map(
+                        ({
+                            id,
+                            title,
+                            category,
+                            date,
+                            comments,
+                            image,
+                        }: ArticleProps) => (
+                            <Grid item xs={12} sm={6} md={6} key={id}>
+                                <ArticlesListItem
+                                    title={title}
+                                    category={category}
+                                    date={date}
+                                    comments={comments}
+                                    image={image}
+                                />
+                            </Grid>
+                        )
+                    )}
             </Grid>
         </>
     )

@@ -55,8 +55,9 @@ const ArticlesListItem = ({
                 <div className="article-title">{title}</div>
                 <div className="under-title">
                     <div className="cat-date-com">
-                        {/* <div className="article-category">{category}</div> */}
-                        <LinkItem to={`/${category}`}>{category}</LinkItem>
+                        <div className="link-category">
+                            <LinkItem to={`/${category}`}>{category}</LinkItem>
+                        </div>
 
                         <FaRegClock className="icons" />
                         <div className="article-date">{date}</div>
