@@ -21,6 +21,10 @@ type ArticleProps = {
 }
 
 const Category = ({ category }: Props) => {
+    // console.log(articlesArray.filter((filtered) => filtered.category === category).length)
+        
+     
+// console.log( articlesArray[1].category);
     return (
         <div className="category">
             <Grid
@@ -42,17 +46,17 @@ const Category = ({ category }: Props) => {
                                 comments,
                                 image,
                                 description,
-                            }: ArticleProps) => (
+                            }: ArticleProps ) => (
                                 <CategoryItem
+                                    key={id}
                                     title={title}
                                     category={category}
                                     date={date}
                                     comments={comments}
                                     image={image}
                                     description={description}
-                                />
-                            )
-                        )}
+                                />)
+                        )}                        
                 </Grid>
                 <Grid item xs={4}>
                     <Search/>
