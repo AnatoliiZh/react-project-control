@@ -2,6 +2,8 @@ import React from 'react'
 // import { Card, CardContent } from '@mui/material'
 import LinkItem from 'components/LinkItem/LinkItem'
 import './Category.scss'
+import DateComments from 'components/DateComments/DateComments'
+import Author from 'components/Author/Author'
 
 type Props = {
     title: string
@@ -9,9 +11,17 @@ type Props = {
     date: string
     comments: number
     image: string
+    description?: string
 }
 
-const CategoryItem = ({ title, category, date, comments, image }: Props) => {
+const CategoryItem = ({
+    title,
+    category,
+    date,
+    comments,
+    image,
+    description,
+}: Props) => {
     return (
         <div className="category-item">
             <div className="box">
@@ -23,6 +33,11 @@ const CategoryItem = ({ title, category, date, comments, image }: Props) => {
                 <LinkItem to={`/${category}`}>{category}</LinkItem>
             </div>
             <div className="category-title">{title}</div>
+            <div className="under-title-category">
+                <Author author="Robert Fox" image="/images/author1.jpeg" />
+                <DateComments date={date} comments={comments} />
+            </div>
+            <div className="category-description">{description}</div>
         </div>
     )
 }

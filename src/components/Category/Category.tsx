@@ -15,6 +15,7 @@ type ArticleProps = {
     date: string
     comments: number
     image: string
+    description?: string
 }
 
 const Category = ({ category }: Props) => {
@@ -38,6 +39,7 @@ const Category = ({ category }: Props) => {
                                 date,
                                 comments,
                                 image,
+                                description,
                             }: ArticleProps) => (
                                 <CategoryItem
                                     title={title}
@@ -45,6 +47,7 @@ const Category = ({ category }: Props) => {
                                     date={date}
                                     comments={comments}
                                     image={image}
+                                    description={description}
                                 />
                             )
                         )}

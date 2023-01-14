@@ -29,7 +29,7 @@
             height:500px;
             object-fit:cover;
          }
-        
+         
     }
     .category-item-text{
         margin-left: 30px;
@@ -60,23 +60,32 @@
         font-family: Manrope;    
     }
 
-    .under-title{
-        font-size: 14px;
-        display: flex;
-        align-items: center;      
-        margin-top: 10px;
-        color: #797171;
-        .icons{
-            color: #bd9b84;
-            margin-right: 10px;
-        }
-        .date{
-            margin-right: 30px;
-            
-        }
-    
+    .category-description{
+        color: #555555;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+        font-family: Manrope;
+        margin-top: 25px;
+        margin-bottom: 25px;  
     }
 }
 
+.under-title-category{
+    font-size: 14px;
+    display: flex;
+    align-items: center;      
+    margin-top: 10px;
+    color: #797171;
+    // color: #fd2a42;
+    .icons{
+        color: #bd9b84;
+        margin-right: 10px;
+    }
+    .date{
+        margin-right: 30px;
+        
+    }
 
+}
 

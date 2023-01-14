@@ -1,9 +1,11 @@
 import React from 'react'
 import { Grid } from '@mui/material'
 import MostRead from 'components/MostRead/MostRead'
-import { FaRegClock } from 'react-icons/fa'
-import { FaRegCommentAlt } from 'react-icons/fa'
+// import { FaRegClock } from 'react-icons/fa'
+// import { FaRegCommentAlt } from 'react-icons/fa'
 import './RecentMost.scss'
+import DateComments from 'components/DateComments/DateComments'
+import Author from 'components/Author/Author'
 
 type Props = {}
 
@@ -30,17 +32,22 @@ const RecentMost = (props: Props) => {
                                 singer Jennifer Lopez from expanding her
                                 property collection. Lopez has reportedly added
                             </div>
-                            <div className="under-title">
-                                <img
+                            <div className="under-title-recent">
+                                {/* <img
                                     src="/images/author1.jpeg"
                                     height="34px"
                                     alt=""
                                 />
-                                <div className="author">Robert Fox</div>
-                                <FaRegClock className="icons" />
+                                <div className="author">Robert Fox</div> */}
+                                <Author
+                                    author="Robert Fox"
+                                    image="/images/author1.jpeg"
+                                />
+                                {/* <FaRegClock className="icons" />
                                 <div className="recent-date">Mar 6, 2022</div>
                                 <FaRegCommentAlt className="icons" />
-                                <div className="article-comments">0</div>
+                                <div className="article-comments">0</div> */}
+                                <DateComments date="Mar 6, 2022" comments={0} />
                             </div>
                         </div>
                     </div>
@@ -60,17 +67,12 @@ const RecentMost = (props: Props) => {
                                 singer Jennifer Lopez from expanding her
                                 property collection. Lopez has reportedly added
                             </div>
-                            <div className="under-title">
-                                <img
-                                    src="/images/author1.jpeg"
-                                    height="34px"
-                                    alt=""
+                            <div className="under-title-recent">
+                                <Author
+                                    author="Robert Fox"
+                                    image="/images/author1.jpeg"
                                 />
-                                <div className="author">Robert Fox</div>
-                                <FaRegClock className="icons" />
-                                <div className="recent-date">Mar 6, 2022</div>
-                                <FaRegCommentAlt className="icons" />
-                                <div className="recent-comments">0</div>
+                                <DateComments date="Mar 6, 2022" comments={0} />
                             </div>
                         </div>
                     </div>

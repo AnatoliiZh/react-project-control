@@ -5,6 +5,7 @@ type ArticleProps = {
     date: string
     comments: number
     image:string
+    description?:string 
 }
 
 const articlesArray:ArticleProps[] = [
@@ -19,10 +20,11 @@ const articlesArray:ArticleProps[] = [
     {
         id:2,
         title: "Cute Pastel Outfit Combinations and Ideas to Wear Pastel",
-        category: "Fashion",
+        category: "Health",
         date: "Mar 6, 2022",
         comments: 0,
-        image:"/images/2crop.webp"
+        image:"/images/2crop.webp",
+        description:"" 
     },
     {
         id:3,
@@ -42,12 +44,22 @@ const articlesArray:ArticleProps[] = [
     },
     {
         id:5,
-        title: "Cute Pastel Outfit Combinations and Ideas to Wear Pastel 22222",
+        title: "What to Think About When Everything Goes Wrong",
         category: "Fashion",
         date: "Mar 6, 2022",
         comments: 0,
-        image:"/images/4crop.webp"
-    }    
+        image:"/images/1mr.webp",
+        description:'Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez from expanding her property collection. Lopez has reportedly added to her real estate holdings an eight-plus acre estate in Bel-Air anchored by a multi-level mansion.'
+    },   
+    {
+        id:6,
+        title: "The curly shag has tons of pretty texture and attitude",
+        category: "Fashion",
+        date: "Mar 6, 2022",
+        comments: 0,
+        image:"/images/2mr_crop.webp",
+        description:'Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez from expanding her property collection. Lopez has reportedly added to her real estate holdings an eight-plus acre estate in Bel-Air anchored by a multi-level mansion.'
+    }   
 ]
 
 export default articlesArray

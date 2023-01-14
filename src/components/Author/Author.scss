@@ -1,0 +1,17 @@
+.under-title-author{
+    display: flex;
+    align-items: center;      
+    // margin-top: 20px;
+    font-size: 14px;
+    color:#797171;
+    img{
+        border-radius: 50%;
+    }
+    .author{
+        font-size: 16px;
+        font-weight: 600;
+        color: #bd9b84;
+        margin-left: 10px;
+        margin-right: 45px;
+    }       
+}

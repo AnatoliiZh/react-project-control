@@ -4,12 +4,13 @@ import { Card, CardContent } from '@mui/material'
 
 import './ArticlesListItem.scss'
 
-import { FaRegClock } from 'react-icons/fa'
-import { FaRegCommentAlt } from 'react-icons/fa'
+// import { FaRegClock } from 'react-icons/fa'
+// import { FaRegCommentAlt } from 'react-icons/fa'
 import { FaRegHeart } from 'react-icons/fa'
 import { FaHeart } from 'react-icons/fa'
 
 import LinkItem from 'components/LinkItem/LinkItem'
+import DateComments from 'components/DateComments/DateComments'
 
 type Props = {
     title: string
@@ -59,10 +60,11 @@ const ArticlesListItem = ({
                             <LinkItem to={`/${category}`}>{category}</LinkItem>
                         </div>
 
-                        <FaRegClock className="icons" />
+                        {/* <FaRegClock className="icons" />
                         <div className="article-date">{date}</div>
                         <FaRegCommentAlt className="icons" />
-                        <div className="article-comments">{comments}</div>
+                        <div className="article-comments">{comments}</div> */}
+                        <DateComments date={date} comments={comments} />
                     </div>
                     <div onClick={() => onLikeClick()}>
                         {like ? (
