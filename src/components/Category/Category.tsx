@@ -3,6 +3,8 @@ import { Grid } from '@mui/material'
 import articlesArray from 'utils/articlesArray'
 import './Category.scss'
 import CategoryItem from './CategoryItem'
+import Search from 'components/Search/Search'
+import Categories from 'components/Categories/Categories'
 
 type Props = {
     category: string
@@ -53,7 +55,8 @@ const Category = ({ category }: Props) => {
                         )}
                 </Grid>
                 <Grid item xs={4}>
-                    Search
+                    <Search/>
+                    <Categories/>
                 </Grid>
             </Grid>
         </div>

@@ -1,0 +1,17 @@
+.categories-heading{
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+    .categories-title{
+        color: #000;
+        font-size: 28px;
+        font-weight: 600;
+        font-family: Manrope;
+    }
+    .categories-line{
+        width: 45px;
+        height: 5px;
+        background-color: #bd9b84;
+        margin-left: 20px;
+    }
+}
