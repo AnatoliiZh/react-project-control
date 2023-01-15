@@ -23,14 +23,52 @@ const Categories = (props: Props) => {
                     </span>
                 </div>
             </div>
-            <div>
-                <div>Health</div>
-                <div>
-                    {
-                        articlesArray.filter(
-                            (filtered) => filtered.category === 'Travel'
-                        ).length
-                    }
+            <div className="categories-box">
+                <div className="categories-name">Health</div>
+                <div className="categories-quantity">
+                    <span>
+                        {
+                            articlesArray.filter(
+                                (filtered) => filtered.category === 'Health'
+                            ).length
+                        }
+                    </span>
+                </div>
+            </div>
+            <div className="categories-box">
+                <div className="categories-name">Lifestyle</div>
+                <div className="categories-quantity">
+                    <span>
+                        {
+                            articlesArray.filter(
+                                (filtered) => filtered.category === 'Lifestyle'
+                            ).length
+                        }
+                    </span>
+                </div>
+            </div>
+            <div className="categories-box">
+                <div className="categories-name">Music</div>
+                <div className="categories-quantity">
+                    <span>
+                        {
+                            articlesArray.filter(
+                                (filtered) => filtered.category === 'Music'
+                            ).length
+                        }
+                    </span>
+                </div>
+            </div>
+            <div className="categories-box">
+                <div className="categories-name">Travel</div>
+                <div className="categories-quantity">
+                    <span>
+                        {
+                            articlesArray.filter(
+                                (filtered) => filtered.category === 'Travel'
+                            ).length
+                        }
+                    </span>
                 </div>
             </div>
         </div>
