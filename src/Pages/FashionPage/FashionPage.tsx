@@ -5,6 +5,7 @@ import 'Pages/Pages.scss'
 import ArticlesInOneCategory from 'components/ArticlesInOneCategory/ArticlesInOneCategory'
 import Search from 'components/Search/Search'
 import Categories from 'components/Categories/Categories'
+import SocialProfiles from 'components/SocialProfiles/SocialProfiles'
 
 type Props = {}
 
@@ -20,6 +21,7 @@ const FashionPage = (props: Props) => {
                 <Grid item xs={4}>
                     <Search />
                     <Categories />
+                    <SocialProfiles />
                 </Grid>
             </Grid>
         </Container>

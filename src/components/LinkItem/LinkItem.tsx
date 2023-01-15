@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-// import './LinkItem.scss'
+import './LinkItem.scss'
 
 type Props = {
     to: string
@@ -8,7 +8,11 @@ type Props = {
 }
 
 const LinkItem = ({ to, children }: Props) => {
-    return <NavLink to={to}>{children}</NavLink>
+    return (
+        <NavLink className="link-category" to={to}>
+            {children}
+        </NavLink>
+    )
 }
 
 export default LinkItem

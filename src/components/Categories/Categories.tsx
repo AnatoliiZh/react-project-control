@@ -1,4 +1,5 @@
 import React from 'react'
+import LinkItem from 'components/LinkItem/LinkItem'
 import articlesArray from 'utils/articlesArray'
 import './Categories.scss'
 
@@ -12,7 +13,9 @@ const Categories = (props: Props) => {
                 <div className="categories-line"></div>
             </div>
             <div className="categories-box">
-                <div className="categories-name">Fashion</div>
+                <div className="categories-name">
+                    <LinkItem to={`/Fashion`}>Fashion</LinkItem>
+                </div>
                 <div className="categories-quantity">
                     <span>
                         {
@@ -24,7 +27,9 @@ const Categories = (props: Props) => {
                 </div>
             </div>
             <div className="categories-box">
-                <div className="categories-name">Health</div>
+                <div className="categories-name">
+                    <LinkItem to={`/Health`}>Health</LinkItem>
+                </div>
                 <div className="categories-quantity">
                     <span>
                         {
@@ -36,7 +41,9 @@ const Categories = (props: Props) => {
                 </div>
             </div>
             <div className="categories-box">
-                <div className="categories-name">Lifestyle</div>
+                <div className="categories-name">
+                    <LinkItem to={`/Lifestyle`}>Lifestyle</LinkItem>
+                </div>
                 <div className="categories-quantity">
                     <span>
                         {
@@ -48,19 +55,9 @@ const Categories = (props: Props) => {
                 </div>
             </div>
             <div className="categories-box">
-                <div className="categories-name">Music</div>
-                <div className="categories-quantity">
-                    <span>
-                        {
-                            articlesArray.filter(
-                                (filtered) => filtered.category === 'Music'
-                            ).length
-                        }
-                    </span>
+                <div className="categories-name">
+                    <LinkItem to={`/Travel`}>Travel</LinkItem>
                 </div>
-            </div>
-            <div className="categories-box">
-                <div className="categories-name">Travel</div>
                 <div className="categories-quantity">
                     <span>
                         {
