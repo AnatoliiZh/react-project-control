@@ -27,10 +27,13 @@
         font-size: 15px;
         font-weight: 500;
         font-family: Manrope;        
-        a{
-            color: #555555;            
-        }                
     }
+    .categories-name a{
+        color: #555555;            
+    }                
+    .categories-name:hover a{
+        color: #bd9b84;            
+    }                
     
     .categories-quantity{        
         margin-bottom: 10px;
