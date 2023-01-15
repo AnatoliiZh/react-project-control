@@ -4,6 +4,7 @@ import LinkItem from 'components/LinkItem/LinkItem'
 import './Category.scss'
 import DateComments from 'components/DateComments/DateComments'
 import Author from 'components/Author/Author'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
 type Props = {
     title: string
@@ -38,6 +39,12 @@ const CategoryItem = ({
                 <DateComments date={date} comments={comments} />
             </div>
             <div className="category-description">{description}</div>
+            <div className="category-continue">
+                <div className="category-continue-title">Continue Reading</div>
+                <div className="category-continue-arrow-box">
+                    <ArrowForwardIcon className="category-continue-arrow" />
+                </div>
+            </div>
         </div>
     )
 }
