@@ -4,6 +4,7 @@ import { Grid } from '@mui/material'
 import 'Pages/Pages.scss'
 import ArticlesInOneCategory from 'components/ArticlesInOneCategory/ArticlesInOneCategory'
 import Search from 'components/Search/Search'
+import Categories from 'components/Categories/Categories'
 
 type Props = {}
 
@@ -18,6 +19,7 @@ const FashionPage = (props: Props) => {
                 </Grid>
                 <Grid item xs={4}>
                     <Search />
+                    <Categories />
                 </Grid>
             </Grid>
         </Container>
