@@ -1,0 +1,53 @@
+.label-category{
+    a {        
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 500;
+        font-family: Manrope;    
+    }
+}
+
+.label-category-health { 
+    width: 100px;
+    padding: 6px 22px;    
+    margin-bottom: 5px;
+    margin-top: 50px;
+    text-align: center;
+    background-color: #00a2f9;        
+}
+.label-category-fashion { 
+    width: 100px;
+    padding: 6px 22px;    
+    margin-bottom: 5px;
+    margin-top: 50px;
+    text-align: center;
+    background-color: #fd2a42;        
+}
+.label-category-lifestyle { 
+    width: 100px;
+    padding: 6px 22px;    
+    margin-bottom: 5px;
+    margin-top: 50px;
+    text-align: center;
+    background-color: #00b875;        
+}
+.label-category-travel { 
+    width: 100px;
+    padding: 6px 22px;    
+    margin-bottom: 5px;
+    margin-top: 50px;
+    text-align: center;
+    background-color: #ffbc00;        
+}
+
+
+// .label-category a {        
+//     text-decoration: none;
+//     color: white;
+//     font-size: 14px;
+//     line-height: 21px;
+//     font-weight: 500;
+//     font-family: Manrope;    
+// }
