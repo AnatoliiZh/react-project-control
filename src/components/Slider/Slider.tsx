@@ -56,32 +56,15 @@ const Slider = (props: Props) => {
         // setId7((prevState: number) => (prevState === 6 ? 0 : prevState + 1))
     }
 
-    // // Хук Effect
-    // useEffect(() => {
-    //     // Запускаем интервал
-    //     const interval = setInterval(() => {
-    //         // Меняем состояние
-    //         setActiveIndex((current) => {
-    //             // Вычисляем индекс следующего слайда, который должен вывестись
-    //             const res = current === img.length - 1 ? 0 : current + 1
-    //             // Возвращаем индекс
-    //             return res
-    //         })
-    //     }, 3000)
-    //     // Выключаем интервал
-    //     return () => clearInterval(interval)
-    // }, [])
-
-    // Вычисляем индекс предыдущего слайда
-    // const prevImgIndex = activeIndex ? activeIndex - 1 : img.length - 1
-    // const prevImgIndex = activeIndex - 1
-    // Вычисляем индекс следующего слайда
-    // const nextImgIndex = activeIndex === img.length - 1 ? 0 : activeIndex + 1
-    // const nextImgIndex = activeIndex + 1
     return (
         <>
-            <button onClick={() => onLeftClick()}>Влево</button>
-            <button onClick={() => onRightClick()}>Вправо</button>
+            <div className="popular">
+                <div className="popular-heading">Recent Stories</div>
+                <div>
+                    <button onClick={() => onLeftClick()}>Влево</button>
+                    <button onClick={() => onRightClick()}>Вправо</button>
+                </div>
+            </div>
 
             <div className="slider">
                 <div className="slider-img id1" key={id1}>

@@ -49,3 +49,19 @@
     transform: translateX(600%);    
   
 }
+
+.popular{
+    margin-top: 100px;    
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    
+    .popular-heading{
+        font-family: Syne;
+        font-size: 30px;
+        font-weight: 700;
+        // line-height: 38px;
+        color: #000;         
+    }
+}   
