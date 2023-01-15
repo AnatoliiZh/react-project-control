@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import EastIcon from '@mui/icons-material/East'
+import WestIcon from '@mui/icons-material/West'
 // import MostReadArray from 'utils/mostReadArray'
 import './Slider.scss'
 
@@ -61,8 +63,11 @@ const Slider = (props: Props) => {
             <div className="popular">
                 <div className="popular-heading">Recent Stories</div>
                 <div>
-                    <button onClick={() => onLeftClick()}>Влево</button>
-                    <button onClick={() => onRightClick()}>Вправо</button>
+                    <WestIcon className="left" onClick={() => onLeftClick()} />
+                    <EastIcon
+                        className="right"
+                        onClick={() => onRightClick()}
+                    />
                 </div>
             </div>
 

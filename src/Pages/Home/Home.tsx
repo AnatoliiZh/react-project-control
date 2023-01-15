@@ -82,7 +82,11 @@ const Home = (props: Props) => {
                     <img src="/images/banner.jpg" width="" alt="ads" />
                 </div>
                 <Slider />
+                <div className="banner">
+                    <img src="/images/banner.jpg" width="" alt="ads" />
+                </div>
             </Container>
+            <div className="subscribe">Subscribe</div>
         </>
     )
 }

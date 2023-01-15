@@ -51,7 +51,7 @@
 }
 
 .popular{
-    margin-top: 100px;    
+    // margin-top: 50px;    
     margin-bottom: 50px;
     display: flex;
     align-items: center;
@@ -62,6 +62,23 @@
         font-size: 30px;
         font-weight: 700;
         // line-height: 38px;
-        color: #000;         
+        color: #000;
     }
+    .left{
+        margin-right: 10px;
+        color: #555555;
+        cursor: pointer;
+    }
+    .left:hover {
+        color: rgb(189, 155, 132);
+    }         
+    .right{
+        margin-right: 10px;
+        color: #555555;
+        cursor: pointer;
+    }
+    .right:hover{
+        color: rgb(189, 155, 132);
+    }         
+             
 }   

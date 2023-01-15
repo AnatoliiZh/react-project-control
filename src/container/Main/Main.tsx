@@ -10,15 +10,15 @@ import 'swiper/css/bundle'
 type Props = {}
 const Main = (props: Props) => {
     return (
-        <Container maxWidth={false} sx={{ padding: '50px 0' }}>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="fashion" element={<FashionPage />} />
-                <Route path="health" element={<HealthPage />} />
-                <Route path="lifestyle" element={<LifestylePage />} />
-                <Route path="travel" element={<TravelPage />} />
-            </Routes>
-        </Container>
+        // <Container maxWidth={false} sx={{ padding: '50px 0' }}>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="fashion" element={<FashionPage />} />
+            <Route path="health" element={<HealthPage />} />
+            <Route path="lifestyle" element={<LifestylePage />} />
+            <Route path="travel" element={<TravelPage />} />
+        </Routes>
+        // </Container>
     )
 }
 export default Main
