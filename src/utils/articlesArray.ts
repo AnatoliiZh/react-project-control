@@ -89,6 +89,60 @@ const articlesArray:ArticleProps[] = [
         comments: 0,
         image:"/images/9.webp",
         description:"Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez from expanding her property collection. Lopez has reportedly added to her real estate holdings an eight-plus acre estate in Bel-Air anchored by a multi-level mansion."      
+    },
+    {
+        id:10,
+        title: "Discover a better way to capture store, and waiting for an invitation see the world",
+        category: "Lifestyle",
+        date: "Mar 6, 2022",
+        comments: 0,
+        image:"/images/10.jpg",
+        description:"Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez from expanding her property collection. Lopez has reportedly added to her real estate holdings an eight-plus acre estate in Bel-Air anchored by a multi-level mansion."      
+    },
+    {
+        id:11,
+        title: "Discover a better way to capture store, and waiting for an invitation see the world",
+        category: "Lifestyle",
+        date: "Mar 6, 2022",
+        comments: 0,
+        image:"/images/11.webp",
+        description:"Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez from expanding her property collection. Lopez has reportedly added to her real estate holdings an eight-plus acre estate in Bel-Air anchored by a multi-level mansion."      
+    },
+    {
+        id:12,
+        title: "Buy Merch for a Good Cause With These VICE Collabs",
+        category: "Lifestyle",
+        date: "Mar 6, 2022",
+        comments: 0,
+        image:"/images/12.webp",
+        description:"Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez from expanding her property collection. Lopez has reportedly added to her real estate holdings an eight-plus acre estate in Bel-Air anchored by a multi-level mansion."      
+    },
+    {
+        id:13,
+        title: "If you’ve been waiting for an invitation, this stories is it",
+        category: "Travel",
+        date: "Mar 6, 2022",
+        comments: 0,
+        image:"/images/13.webp",
+        description:"Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez from expanding her property collection. Lopez has reportedly added to her real estate holdings an eight-plus acre estate in Bel-Air anchored by a multi-level mansion."      
+    },
+    {
+        id:14,
+        title: "Make a beauty selfie 2022: new life to go",
+        category: "Travel",
+        date: "Mar 6, 2022",
+        comments: 0,
+        image:"/images/14.webp",
+        description:"Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez from expanding her property collection. Lopez has reportedly added to her real estate holdings an eight-plus acre estate in Bel-Air anchored by a multi-level mansion."      
+    },
+    {
+        id:15,
+        title: "Everything You Should To Know About CBD Skincare",
+        category: "Travel",
+        date: "Mar 6, 2022",
+        comments: 0,
+        image:"/images/15.webp",
+        description:"Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez from expanding her property collection. Lopez has reportedly added to her real estate holdings an eight-plus acre estate in Bel-Air anchored by a multi-level mansion."      
     }
         
 ]
