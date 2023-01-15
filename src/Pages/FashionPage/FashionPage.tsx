@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from '@mui/material'
 import 'Pages/Pages.scss'
-import Category from 'components/Category/Category'
+import Category from 'components/ArticlesInOneCategory/ArticlesInOneCategory'
 
 type Props = {}
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Grid } from '@mui/material'
 import articlesArray from 'utils/articlesArray'
-import './Category.scss'
-import CategoryItem from './CategoryItem'
+import './ArticlesInOneCategory.scss'
+import CategoryItem from './ArticlesInOneCategoryItem'
 
 type Props = {
     category: string
@@ -18,7 +18,7 @@ type ArticleProps = {
     description?: string
 }
 
-const Category = ({ category }: Props) => {
+const ArticlesInOneCategory = ({ category }: Props) => {
     return (
         <div className="category">
             <Grid
@@ -60,4 +60,4 @@ const Category = ({ category }: Props) => {
     )
 }
 
-export default Category
+export default ArticlesInOneCategory

@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Card, CardContent } from '@mui/material'
 import LinkItem from 'components/LinkItem/LinkItem'
-import './Category.scss'
+import './ArticlesInOneCategory.scss'
 import DateComments from 'components/DateComments/DateComments'
 import Author from 'components/Author/Author'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
@@ -15,7 +15,7 @@ type Props = {
     description?: string
 }
 
-const CategoryItem = ({
+const ArticlesInOneCategoryItem = ({
     title,
     category,
     date,
@@ -49,4 +49,4 @@ const CategoryItem = ({
     )
 }
 
-export default CategoryItem
+export default ArticlesInOneCategoryItem
