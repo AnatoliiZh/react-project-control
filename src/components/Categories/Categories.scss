@@ -1,3 +1,5 @@
+.categories{
+    margin-bottom: 45px;
 .categories-heading{
     display: flex;
     align-items: center;
@@ -19,7 +21,7 @@
 .categories-box{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;    
     .categories-name{
         color: #555555;
         font-size: 15px;
@@ -44,4 +46,5 @@
         }
 
     }
+}
 }

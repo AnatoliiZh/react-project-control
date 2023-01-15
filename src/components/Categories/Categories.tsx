@@ -6,7 +6,7 @@ type Props = {}
 
 const Categories = (props: Props) => {
     return (
-        <div>
+        <div className="categories">
             <div className="categories-heading">
                 <div className="categories-title">Categories</div>
                 <div className="categories-line"></div>
