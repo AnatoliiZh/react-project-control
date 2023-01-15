@@ -1,7 +1,8 @@
 import React from 'react'
 import { Container } from '@mui/material'
+import { Grid } from '@mui/material'
 import 'Pages/Pages.scss'
-import Category from 'components/ArticlesInOneCategory/ArticlesInOneCategory'
+import ArticlesInOneCategory from 'components/ArticlesInOneCategory/ArticlesInOneCategory'
 
 type Props = {}
 
@@ -9,7 +10,15 @@ const FashionPage = (props: Props) => {
     return (
         <Container maxWidth="lg">
             <div className="title">Category : Fashion</div>
-            <Category category="Fashion" />
+            {/* <ArticlesInOneCategory category="Fashion" /> */}
+            <Grid container spacing={6}>
+                <Grid item xs={8}>
+                    <ArticlesInOneCategory category="Fashion" />
+                </Grid>
+                <Grid item xs={4}>
+                    Search
+                </Grid>
+            </Grid>
         </Container>
     )
 }
