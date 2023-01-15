@@ -15,6 +15,7 @@ import MostRead from 'components/MostRead/MostRead'
 import Social from 'components/Social/Social'
 import RecentMost from 'components/RecentMost/RecentMost'
 import Slider from 'components/Slider/Slider'
+import Subscribe from 'components/Subscribe/Subscribe'
 
 type Props = {}
 const Home = (props: Props) => {
@@ -86,7 +87,7 @@ const Home = (props: Props) => {
                     <img src="/images/banner.jpg" width="" alt="ads" />
                 </div>
             </Container>
-            <div className="subscribe">Subscribe</div>
+            <Subscribe/>
         </>
     )
 }
