@@ -2,6 +2,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import Header from '../Header/Header'
 import { StyledEngineProvider } from '@mui/material/styles'
 import Main from 'container/Main/Main'
+import Footer from 'container/Footer/Footer'
 
 type Props = {}
 const App = (props: Props) => {
@@ -11,6 +12,7 @@ const App = (props: Props) => {
             <Header />
 
             <Main />
+            <Footer />
         </StyledEngineProvider>
     )
 }

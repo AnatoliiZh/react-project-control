@@ -1,6 +1,6 @@
 import React from 'react'
 // import { Card, CardContent } from '@mui/material'
-import LinkItem from 'components/LinkItem/LinkItem'
+// import LinkItem from 'components/LinkItem/LinkItem'
 import './ArticlesInOneCategory.scss'
 import DateComments from 'components/DateComments/DateComments'
 import Author from 'components/Author/Author'
@@ -34,8 +34,8 @@ const ArticlesInOneCategoryItem = ({
                 <LinkItem to={`/${category}`}>{category}</LinkItem>
             </div> */}
 
-            <LabelCategory category={category}/>
-            
+            <LabelCategory category={category} />
+
             <div className="category-title">{title}</div>
             <div className="under-title-category">
                 <Author author="Robert Fox" image="/images/author1.jpeg" />
