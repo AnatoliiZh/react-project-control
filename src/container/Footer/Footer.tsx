@@ -26,9 +26,44 @@ const Footer = (props: Props) => {
                             +30-2106019311
                         </div>
                     </Grid>
-                    <Grid item xs={3}></Grid>
-                    <Grid item xs={3}></Grid>
-                    <Grid item xs={3}></Grid>
+                    <Grid item xs={3}>
+                        <div className="footer-2">
+                            <div className="footer-title-2">Quick Links</div>
+                            <div className="footer-line"></div>
+                            <ul className="footer-list">
+                                <li>About</li>
+                                <li>Lifestyle</li>
+                                <li>Blog</li>
+                                <li>Home</li>
+                                <li>News</li>
+                            </ul>
+                        </div>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <div className="footer-3">
+                            <div className="footer-title-3">About</div>
+                            <div className="footer-line"></div>
+                            <ul className="footer-list">
+                                <li>About</li>
+                                <li>Lifestyle</li>
+                                <li>Blog</li>
+                                <li>Home</li>
+                                <li>News</li>
+                            </ul>
+                        </div>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <div className="footer-4">
+                            <div className="footer-title-4">Categories</div>
+                            <div className="footer-line"></div>
+                            <ul className="footer-list">
+                                <li>Fashion</li>
+                                <li>Health</li>
+                                <li>Lifestyle</li>
+                                <li>Travel</li>
+                            </ul>
+                        </div>
+                    </Grid>
                 </Grid>
             </Container>
         </div>

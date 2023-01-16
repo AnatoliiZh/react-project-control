@@ -22,6 +22,7 @@
         margin-top: 30px;
         font-family: "Manrope";    
         font-weight: 500;
+        
     }
     .footer-address-phone{
         font-size: 17px;
@@ -33,6 +34,28 @@
         font-weight: 500;
         .footer-span{
             font-weight: bolder;
+        }
+    }
+    .footer-2, .footer-3, .footer-4{
+        margin-left: 50px;
+
+        .footer-title-2, .footer-title-3, .footer-title-4 {
+            font-family: Syne;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 32px;
+            color: #000;
+            margin-bottom: 10px;         
+        }
+        .footer-list{
+            list-style: none;
+            font-size: 16px;
+            line-height: 32px;
+            color: #111;
+            font-family: "Manrope";    
+            font-weight: 500;
+            padding: 0;
+    
         }
     }
 }
