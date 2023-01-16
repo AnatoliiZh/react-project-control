@@ -66,6 +66,11 @@ const Footer = (props: Props) => {
                     </Grid>
                 </Grid>
             </Container>
+            <Container maxWidth="xl">
+                <div className="footer-bottom">
+                    Copyright © Alino 2022. All rights reserved
+                </div>
+            </Container>
         </div>
     )
 }
