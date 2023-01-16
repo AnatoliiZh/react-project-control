@@ -54,9 +54,11 @@
             color: #111;
             font-family: "Manrope";    
             font-weight: 500;
-            padding: 0;
-    
+            padding: 0;            
         }
+        .footer-list-item:hover a{
+            color: #bd9b84;            
+        }  
     }
     .footer-bottom{
         margin-top: 70px;

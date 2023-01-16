@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid } from '@mui/material'
 import { Container } from '@mui/material'
+import LinkItem from 'components/LinkItem/LinkItem'
 import './Footer.scss'
 
 type Props = {}
@@ -32,7 +33,6 @@ const Footer = (props: Props) => {
                             <div className="footer-line"></div>
                             <ul className="footer-list">
                                 <li>About</li>
-                                <li>Lifestyle</li>
                                 <li>Blog</li>
                                 <li>Home</li>
                                 <li>News</li>
@@ -45,7 +45,6 @@ const Footer = (props: Props) => {
                             <div className="footer-line"></div>
                             <ul className="footer-list">
                                 <li>About</li>
-                                <li>Lifestyle</li>
                                 <li>Blog</li>
                                 <li>Home</li>
                                 <li>News</li>
@@ -57,10 +56,20 @@ const Footer = (props: Props) => {
                             <div className="footer-title-4">Categories</div>
                             <div className="footer-line"></div>
                             <ul className="footer-list">
-                                <li>Fashion</li>
-                                <li>Health</li>
-                                <li>Lifestyle</li>
-                                <li>Travel</li>
+                                <li className="footer-list-item">
+                                    <LinkItem to={`/Fashion`}>Fashion</LinkItem>
+                                </li>
+                                <li className="footer-list-item">
+                                    <LinkItem to={`/Health`}>Health</LinkItem>
+                                </li>
+                                <li className="footer-list-item">
+                                    <LinkItem to={`/Lifestyle`}>
+                                        Lifestyle
+                                    </LinkItem>
+                                </li>
+                                <li className="footer-list-item">
+                                    <LinkItem to={`/Travel`}>Travel</LinkItem>
+                                </li>
                             </ul>
                         </div>
                     </Grid>

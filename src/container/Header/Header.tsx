@@ -36,6 +36,7 @@ const Header = (props: Props) => {
                     backgroundColor: 'white',
                     color: 'brown',
                     padding: '30px 0 ',
+                    boxShadow: 'none',
                 }}
             >
                 <Container maxWidth="lg">
