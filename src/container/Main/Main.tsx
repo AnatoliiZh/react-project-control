@@ -6,7 +6,7 @@ import TravelPage from 'Pages/TravelPage/TravelPage'
 import FashionPage from 'Pages/FashionPage/FashionPage'
 import { Routes, Route } from 'react-router-dom'
 import 'swiper/css/bundle'
-import AboutPage from 'Pages/About/AboutPage'
+import AboutPage from 'Pages/AboutPage/AboutPage'
 
 type Props = {}
 const Main = (props: Props) => {
@@ -14,7 +14,7 @@ const Main = (props: Props) => {
         // <Container maxWidth={false} sx={{ padding: '50px 0' }}>
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="about" element={<AboutPage/>} />
+            <Route path="about" element={<AboutPage />} />
             <Route path="fashion" element={<FashionPage />} />
             <Route path="health" element={<HealthPage />} />
             <Route path="lifestyle" element={<LifestylePage />} />

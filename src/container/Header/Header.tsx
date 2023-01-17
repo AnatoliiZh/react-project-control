@@ -45,83 +45,91 @@ const Header = (props: Props) => {
                             margin: '0 0 20px 0',
                         }}
                     >
-                        <Box
-                            component="div"
-                            sx={{
-                                border: 'solid 1px #015BFA',
-                                color: '#015BFA',
-                                height: '30px',
-                                width: '30px',
-                                alignSelf: 'center',
-                                borderRadius: '50%',
-                                '&:hover': {
-                                    backgroundColor: '#bd9b84',
-                                    border: 'solid 1px #bd9b84',
-                                    opacity: [0.9, 0.8, 0.7],
-                                    color: 'white',
-                                },
-                            }}
-                        >
-                            <FaFacebookF
-                                style={{
-                                    height: '28px',
-                                    width: '28px',
-                                    padding: '7px',
+                        <a href="https://www.facebook.com/">
+                            <Box
+                                component="div"
+                                sx={{
+                                    marginTop: '10px',
+                                    border: 'solid 1px #015BFA',
+                                    color: '#015BFA',
+                                    height: '30px',
+                                    width: '30px',
+                                    alignSelf: 'center',
+                                    borderRadius: '50%',
+                                    '&:hover': {
+                                        backgroundColor: '#bd9b84',
+                                        border: 'solid 1px #bd9b84',
+                                        opacity: [0.9, 0.8, 0.7],
+                                        color: 'white',
+                                    },
                                 }}
-                            />
-                        </Box>
-                        <Box
-                            component="div"
-                            sx={{
-                                border: 'solid 1px #FF006B',
-                                color: '#FF006B',
-                                height: '30px',
-                                width: '30px',
-                                margin: '0 20px',
-                                alignSelf: 'center',
-                                borderRadius: '50%',
-                                '&:hover': {
-                                    backgroundColor: '#bd9b84',
-                                    border: 'solid 1px #bd9b84',
-                                    opacity: [0.9, 0.8, 0.7],
-                                    color: 'white',
-                                },
-                            }}
-                        >
-                            <FaInstagram
-                                style={{
-                                    height: '28px',
-                                    width: '28px',
-                                    padding: '7px',
+                            >
+                                <FaFacebookF
+                                    style={{
+                                        height: '28px',
+                                        width: '28px',
+                                        padding: '7px',
+                                    }}
+                                />
+                            </Box>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <Box
+                                component="div"
+                                sx={{
+                                    margin: '10px 20px ',
+                                    border: 'solid 1px #FF006B',
+                                    color: '#FF006B',
+                                    height: '30px',
+                                    width: '30px',
+                                    alignSelf: 'center',
+                                    borderRadius: '50%',
+                                    '&:hover': {
+                                        backgroundColor: '#bd9b84',
+                                        border: 'solid 1px #bd9b84',
+                                        opacity: [0.9, 0.8, 0.7],
+                                        color: 'white',
+                                    },
                                 }}
-                            />
-                        </Box>
-                        <Box
-                            component="div"
-                            sx={{
-                                border: 'solid 1px #55ACEE',
-                                color: '#55ACEE',
-                                height: '30px',
-                                width: '30px',
+                            >
+                                <FaInstagram
+                                    style={{
+                                        height: '28px',
+                                        width: '28px',
+                                        padding: '7px',
+                                    }}
+                                />
+                            </Box>
+                        </a>
+                        <a href="https://www.twitter.com/">
+                            <Box
+                                component="div"
+                                sx={{
+                                    marginTop: '10px',
+                                    border: 'solid 1px #55ACEE',
+                                    color: '#55ACEE',
+                                    height: '30px',
+                                    width: '30px',
 
-                                alignSelf: 'center',
-                                borderRadius: '50%',
-                                '&:hover': {
-                                    backgroundColor: '#bd9b84',
-                                    border: 'solid 1px #bd9b84',
-                                    opacity: [0.9, 0.8, 0.7],
-                                    color: 'white',
-                                },
-                            }}
-                        >
-                            <FaTwitter
-                                style={{
-                                    height: '28px',
-                                    width: '28px',
-                                    padding: '7px',
+                                    alignSelf: 'center',
+                                    borderRadius: '50%',
+                                    '&:hover': {
+                                        backgroundColor: '#bd9b84',
+                                        border: 'solid 1px #bd9b84',
+                                        opacity: [0.9, 0.8, 0.7],
+                                        color: 'white',
+                                    },
                                 }}
-                            />
-                        </Box>
+                            >
+                                <FaTwitter
+                                    style={{
+                                        height: '28px',
+                                        width: '28px',
+                                        padding: '7px',
+                                    }}
+                                />
+                            </Box>
+                        </a>
 
                         <Typography
                             variant="h3"

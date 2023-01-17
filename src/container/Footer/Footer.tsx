@@ -32,9 +32,13 @@ const Footer = (props: Props) => {
                             <div className="footer-title-2">Quick Links</div>
                             <div className="footer-line"></div>
                             <ul className="footer-list">
-                                <li>About</li>
+                                <li className="footer-list-item">
+                                    <LinkItem to={`/About`}>About</LinkItem>
+                                </li>
                                 <li>Blog</li>
-                                <li>Home</li>
+                                <li className="footer-list-item">
+                                    <LinkItem to={`/`}>Home</LinkItem>
+                                </li>
                                 <li>News</li>
                             </ul>
                         </div>
@@ -44,9 +48,13 @@ const Footer = (props: Props) => {
                             <div className="footer-title-3">About</div>
                             <div className="footer-line"></div>
                             <ul className="footer-list">
-                                <li>About</li>
+                                <li className="footer-list-item">
+                                    <LinkItem to={`/About`}>About</LinkItem>
+                                </li>
                                 <li>Blog</li>
-                                <li>Home</li>
+                                <li className="footer-list-item">
+                                    <LinkItem to={`/`}>Home</LinkItem>
+                                </li>
                                 <li>News</li>
                             </ul>
                         </div>
