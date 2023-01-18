@@ -3,6 +3,7 @@ import { Container } from '@mui/material'
 import { Grid } from '@mui/material'
 import 'Pages/Pages.scss'
 import './AboutPage.scss'
+import Reviews from 'components/Reviews/Reviews'
 
 type Props = {}
 
@@ -103,6 +104,7 @@ const AboutPage = (props: Props) => {
                 the produce crop yields and on equivalent to that switched
                 seeds.
             </p>
+            <Reviews/>
         </Container>
     )
 }

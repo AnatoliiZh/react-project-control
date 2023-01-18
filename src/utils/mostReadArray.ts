@@ -7,7 +7,7 @@ type MostReadProps = {
     image:string
 }
 
-const MostReadArray:MostReadProps[] = [
+const mostReadArray:MostReadProps[] = [
     {
         id:1,
         title: "What to Think About When Everything Goes Wrong",
@@ -74,4 +74,4 @@ const MostReadArray:MostReadProps[] = [
     }
 ]
 
-export default MostReadArray
+export default mostReadArray

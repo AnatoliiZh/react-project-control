@@ -3,7 +3,7 @@ import './MostRead.scss'
 // import { FaRegClock } from 'react-icons/fa'
 // import { FaRegCommentAlt } from 'react-icons/fa'
 import MostReadItem from './MostReadItem'
-import MostReadArray from 'utils/mostReadArray'
+import mostReadArray from 'utils/mostReadArray'
 
 type MostReadProps = {
     id: number
@@ -26,7 +26,7 @@ const MostRead = ({ id1, id2, id3, id4 }: Props) => {
         <div className="most-read">
             <div className="most-read-heading">Most Read</div>
             {/* {MostReadArray.slice(start, end).map( */}
-            {MostReadArray.filter(
+            {mostReadArray.filter(
                 (filtered) =>
                     filtered.id === id1 ||
                     filtered.id === id2 ||
