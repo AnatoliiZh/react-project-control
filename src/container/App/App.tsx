@@ -5,7 +5,6 @@ import Main from 'container/Main/Main'
 import Footer from 'container/Footer/Footer'
 import { useState } from 'react'
 
-
 type Props = {}
 
 type ArticlesLikeState = {
@@ -13,7 +12,7 @@ type ArticlesLikeState = {
 }
 
 const App = (props: Props) => {
-    const [articlesLikeState, setArticlesLikeState] =    
+    const [articlesLikeState, setArticlesLikeState] =
         useState<ArticlesLikeState>({
             1: true,
             2: true,
@@ -30,7 +29,10 @@ const App = (props: Props) => {
             <CssBaseline />
             <Header />
 
-            <Main />
+            <Main
+                changeLike={changeLike}
+                articlesLikeState={articlesLikeState}
+            />
             <Footer />
         </StyledEngineProvider>
     )

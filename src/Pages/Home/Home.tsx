@@ -17,8 +17,16 @@ import RecentMost from 'components/RecentMost/RecentMost'
 import Slider from 'components/Slider/Slider'
 import Subscribe from 'components/Subscribe/Subscribe'
 
-type Props = {}
-const Home = (props: Props) => {
+type Props = {
+    changeLike: (id: number) => void
+    articlesLikeState: ArticlesLikeState
+}
+
+type ArticlesLikeState = {
+    [id: number]: boolean
+}
+
+const Home = ({ changeLike, articlesLikeState }: Props) => {
     return (
         <>
             <Swiper
@@ -71,7 +79,10 @@ const Home = (props: Props) => {
                 </Typography>
                 <Grid container spacing={2}>
                     <Grid item xs={8}>
-                        <ArticlesList />
+                        <ArticlesList
+                            changeLike={changeLike}
+                            articlesLikeState={articlesLikeState}
+                        />
                     </Grid>
                     <Grid item xs={4}>
                         <MostRead id1={1} id2={2} id3={3} id4={4} />
@@ -87,7 +98,7 @@ const Home = (props: Props) => {
                     <img src="/images/banner.jpg" width="" alt="ads" />
                 </div>
             </Container>
-            <Subscribe/>
+            <Subscribe />
         </>
     )
 }

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Card, CardContent } from '@mui/material'
 // import Typography from '@mui/material/Typography'
 
@@ -13,25 +12,35 @@ import LinkItem from 'components/LinkItem/LinkItem'
 import DateComments from 'components/DateComments/DateComments'
 
 type Props = {
+    id: number
     title: string
     category: string
     date: string
     comments: number
     image: string
+    changeLike: (id: number) => void
+    articlesLikeState: ArticlesLikeState
+}
+
+type ArticlesLikeState = {
+    [id: number]: boolean
 }
 
 const ArticlesListItem = ({
+    id,
     title,
     category,
     date,
     comments,
     image,
+    changeLike,
+    articlesLikeState,
 }: Props) => {
-    const [like, setLike] = useState<boolean>(false)
+    // const [like, setLike] = useState<boolean>(false)
 
-    const onLikeClick = () => {
-        setLike((prevState: boolean) => !prevState)
-    }
+    // const onLikeClick = () => {
+    //     setLike((prevState: boolean) => !prevState)
+    // }
     return (
         <Card
             className="article"
@@ -66,13 +75,20 @@ const ArticlesListItem = ({
                         <div className="article-comments">{comments}</div> */}
                         <DateComments date={date} comments={comments} />
                     </div>
-                    <div onClick={() => onLikeClick()}>
-                        {like ? (
+                    <div className="like" onClick={() => changeLike(id)}>
+                        {articlesLikeState[id] ? (
+                            <FaHeart className="like-icon" />
+                        ) : (
+                            <FaRegHeart className="like-icon" />
+                        )}
+                    </div>
+                    {/* <Button variant="outlined" onClick={() => changeLike(id)}>
+                        {articlesLikeState[id] ? (
                             <FaHeart className="like" />
                         ) : (
                             <FaRegHeart className="like" />
                         )}
-                    </div>
+                    </Button> */}
                 </div>
             </CardContent>
         </Card>

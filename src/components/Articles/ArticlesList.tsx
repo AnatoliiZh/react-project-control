@@ -11,9 +11,16 @@ type ArticleProps = {
     image: string
 }
 
-type Props = {}
+type Props = {
+    changeLike: (id: number) => void
+    articlesLikeState: ArticlesLikeState
+}
 
-const ArticlesList = (props: Props) => {
+type ArticlesLikeState = {
+    [id: number]: boolean
+}
+
+const ArticlesList = ({ changeLike, articlesLikeState }: Props) => {
     return (
         <>
             <Grid
@@ -36,11 +43,14 @@ const ArticlesList = (props: Props) => {
                         }: ArticleProps) => (
                             <Grid item xs={12} sm={6} md={6} key={id}>
                                 <ArticlesListItem
+                                    id={id}
                                     title={title}
                                     category={category}
                                     date={date}
                                     comments={comments}
                                     image={image}
+                                    changeLike={changeLike}
+                                    articlesLikeState={articlesLikeState}
                                 />
                             </Grid>
                         )

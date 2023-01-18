@@ -8,12 +8,28 @@ import { Routes, Route } from 'react-router-dom'
 import 'swiper/css/bundle'
 import AboutPage from 'Pages/AboutPage/AboutPage'
 
-type Props = {}
-const Main = (props: Props) => {
+type Props = {
+    changeLike: (id: number) => void
+    articlesLikeState: ArticlesLikeState
+}
+
+type ArticlesLikeState = {
+    [id: number]: boolean
+}
+
+const Main = ({ changeLike, articlesLikeState }: Props) => {
     return (
         // <Container maxWidth={false} sx={{ padding: '50px 0' }}>
         <Routes>
-            <Route path="/" element={<Home />} />
+            <Route
+                path="/"
+                element={
+                    <Home
+                        changeLike={changeLike}
+                        articlesLikeState={articlesLikeState}
+                    />
+                }
+            />
             <Route path="about" element={<AboutPage />} />
             <Route path="fashion" element={<FashionPage />} />
             <Route path="health" element={<HealthPage />} />

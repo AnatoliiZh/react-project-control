@@ -73,8 +73,12 @@
     }
     .like{
         position: absolute;
-        bottom: 60px;
+        top: 30px;
         right: 30px;
+        .like-icon{
+            width: 20px;
+            height: 20px;
+        }        
     }
     
 }
