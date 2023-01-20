@@ -18,7 +18,7 @@ type Props = {
 const RecentItem = ({ title, date, comments, image, description }: Props) => {
     return (
         <div className="recent-item">
-            <div className="box">
+            <div className="recent-box">
                 <img src={image}  alt="" />
             </div> 
             {/* <img src={image} width="400px" alt="" /> */}
