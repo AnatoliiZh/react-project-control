@@ -10,7 +10,7 @@ type Props = {
 
 const DateComments = ({ date, comments }: Props) => {
     return (
-        <div className="under-title">
+        <div className="date-comments">
             <FaRegClock className="icons" />
             <div className="date">{date}</div>
             <FaRegCommentAlt className="icons" />

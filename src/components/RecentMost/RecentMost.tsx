@@ -4,8 +4,9 @@ import MostRead from 'components/MostRead/MostRead'
 // import { FaRegClock } from 'react-icons/fa'
 // import { FaRegCommentAlt } from 'react-icons/fa'
 import './RecentMost.scss'
-import DateComments from 'components/DateComments/DateComments'
-import Author from 'components/Author/Author'
+// import DateComments from 'components/DateComments/DateComments'
+// import Author from 'components/Author/Author'
+import Recent from 'components/Recent/Recent'
 
 type Props = {}
 
@@ -14,8 +15,10 @@ const RecentMost = (props: Props) => {
         <div className="recent-most">
             <Grid container spacing={2}>
                 <Grid item xs={8}>
-                    <div className="recent-heading">Recent Stories</div>
-                    <div className="recent-item">
+                    <Recent id1={12} id2={8}/>
+                    {/* <div className="recent-heading">Recent Stories</div> */}
+
+                    {/* <div className="recent-item">
                         <img
                             src="/images/1rec_crop.webp"
                             height="340px"
@@ -33,20 +36,12 @@ const RecentMost = (props: Props) => {
                                 property collection. Lopez has reportedly added
                             </div>
                             <div className="under-title-recent">
-                                {/* <img
-                                    src="/images/author1.jpeg"
-                                    height="34px"
-                                    alt=""
-                                />
-                                <div className="author">Robert Fox</div> */}
+                                
                                 <Author
                                     author="Robert Fox"
                                     image="/images/author1.jpeg"
                                 />
-                                {/* <FaRegClock className="icons" />
-                                <div className="recent-date">Mar 6, 2022</div>
-                                <FaRegCommentAlt className="icons" />
-                                <div className="article-comments">0</div> */}
+                                
                                 <DateComments date="Mar 6, 2022" comments={0} />
                             </div>
                         </div>
@@ -75,7 +70,7 @@ const RecentMost = (props: Props) => {
                                 <DateComments date="Mar 6, 2022" comments={0} />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </Grid>
                 <Grid item xs={4}>
                     <MostRead id1={5} id2={6} id3={7} id4={8} />

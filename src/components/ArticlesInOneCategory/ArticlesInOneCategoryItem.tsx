@@ -28,12 +28,7 @@ const ArticlesInOneCategoryItem = ({
         <div className="category-item">
             <div className="box">
                 <img src={image} alt="" />
-            </div>
-
-            {/* <div className="category-category">                
-                <LinkItem to={`/${category}`}>{category}</LinkItem>
-            </div> */}
-
+            </div>            
             <LabelCategory category={category} />
 
             <div className="category-title">{title}</div>

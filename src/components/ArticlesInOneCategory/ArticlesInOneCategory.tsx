@@ -45,11 +45,7 @@ const ArticlesInOneCategory = ({ category }: Props) => {
                         />
                     )
                 )}
-            {/* </Grid>
-                <Grid item xs={4}>
-                    Search
-                </Grid>
-            </Grid> */}
+            
         </div>
     )
 }
