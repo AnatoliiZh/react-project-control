@@ -7,6 +7,7 @@ import FashionPage from 'Pages/FashionPage/FashionPage'
 import { Routes, Route } from 'react-router-dom'
 import 'swiper/css/bundle'
 import AboutPage from 'Pages/AboutPage/AboutPage'
+import FavoritePage from 'Pages/FavoritePage/FavoritePage'
 
 type Props = {
     changeLike: (id: number) => void
@@ -35,6 +36,8 @@ const Main = ({ changeLike, articlesLikeState }: Props) => {
             <Route path="health" element={<HealthPage />} />
             <Route path="lifestyle" element={<LifestylePage />} />
             <Route path="travel" element={<TravelPage />} />
+            <Route path="favorite" element={<FavoritePage changeLike={changeLike}
+                        articlesLikeState={articlesLikeState}/>} />
         </Routes>
         // </Container>
     )
