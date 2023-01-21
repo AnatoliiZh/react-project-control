@@ -85,7 +85,7 @@ const Home = ({ changeLike, articlesLikeState }: Props) => {
                         />
                     </Grid>
                     <Grid item xs={4}>
-                        <MostRead id1={1} id2={2} id3={3} id4={4} />
+                        <MostRead id1={3} id2={5} id3={6} id4={7} />
                         <Social />
                     </Grid>
                 </Grid>

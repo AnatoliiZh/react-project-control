@@ -61,7 +61,7 @@ const Slider = (props: Props) => {
     return (
         <>
             <div className="popular">
-                <div className="popular-heading">Recent Stories</div>
+                <div className="popular-heading">Our Galary</div>
                 <div>
                     <WestIcon className="left" onClick={() => onLeftClick()} />
                     <EastIcon
