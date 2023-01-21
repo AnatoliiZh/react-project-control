@@ -13,8 +13,8 @@ const NextPrevLeft = ({ id }: Props) => {
             <div className="box">
                 <img src={articlesArray[id].image} alt="" />
             </div>
-            <div className="most-read-item-text">
-                <div>Previous Post</div>
+            <div>
+                <div className="heading2">Previous Post</div>
                 <div className="title2">
                     <Link to={`/articles/${id}`}>
                         {articlesArray[id].title}
