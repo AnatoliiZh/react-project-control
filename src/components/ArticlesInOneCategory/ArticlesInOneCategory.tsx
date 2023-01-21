@@ -42,10 +42,10 @@ const ArticlesInOneCategory = ({ category }: Props) => {
                             comments={comments}
                             image={image}
                             description={description}
+                            key={id}
                         />
                     )
                 )}
-            
         </div>
     )
 }

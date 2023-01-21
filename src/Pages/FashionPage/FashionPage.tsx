@@ -6,7 +6,6 @@ import ArticlesInOneCategory from 'components/ArticlesInOneCategory/ArticlesInOn
 import Search from 'components/Search/Search'
 import Categories from 'components/Categories/Categories'
 import SocialProfiles from 'components/SocialProfiles/SocialProfiles'
-import Reviews from 'components/Reviews/Reviews'
 
 type Props = {}
 
@@ -18,7 +17,6 @@ const FashionPage = (props: Props) => {
             <Grid container spacing={6}>
                 <Grid item xs={8}>
                     <ArticlesInOneCategory category="Fashion" />
-                    <Reviews/>
                 </Grid>
                 <Grid item xs={4}>
                     <Search />
