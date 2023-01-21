@@ -12,6 +12,7 @@ import Reviews from 'components/Reviews/Reviews'
 import DateComments from 'components/DateComments/DateComments'
 import Author from 'components/Author/Author'
 import LabelCategory from 'components/LabelCategory/LabelCategory'
+import AboutAuthor from 'components/Author/AboutAuthor'
 
 type Props = {}
 
@@ -75,6 +76,10 @@ const ArticlePage = (props: Props) => {
                                 )
                             )}
                     </div>
+                    <AboutAuthor
+                        author="Robert Fox"
+                        image="/images/author1_big.jpeg"
+                    />
                     <Reviews />
                 </Grid>
                 <Grid item xs={4}>
