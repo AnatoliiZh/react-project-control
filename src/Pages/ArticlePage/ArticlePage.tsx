@@ -79,6 +79,7 @@ const ArticlePage = (props: Props) => {
                     <AboutAuthor
                         author="Robert Fox"
                         image="/images/author1_big.jpeg"
+                        text="Hello! My name is Robert Fox!, Actively writing articles for this blog . I really like tutorials and illustrations, stay alert next tutorials."
                     />
                     <Reviews />
                 </Grid>
@@ -86,7 +87,7 @@ const ArticlePage = (props: Props) => {
                     <Search />
                     <Categories />
                     <SocialProfiles />
-                    <LabelCategory category="Health" />
+                    
                 </Grid>
             </Grid>
         </Container>

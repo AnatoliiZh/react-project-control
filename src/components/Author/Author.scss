@@ -17,8 +17,44 @@
 }
 
 .about-author{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(243, 248, 251, 0.6);
+    padding: 30px;
+    // border: solid 1px red;
+    border-radius: 20px;
     img{
         border-radius: 50%;
+        margin-right: 25px;
     }
+    
+    .about-author-right{
+        h6{
+            color: #555555;
+            font-weight: 500;
+            font-size: 15px;
+            margin: 0px;
+            // line-height: 30px;
+            font-family: "Syne";
+        }
+        h4{
+            color: #424242;
+            margin: 10px 0;
+            font-size: 20px;
+            line-height: 26px;
+            font-weight: 600;
+            font-family: "Syne";
+        }
+        p{
+            font-size: 16px;
+            line-height: 24px;
+            color: #000;
+            margin: 0px;
+            font-weight: 400;
+            font-family: "Manrope";
+        }
+
+    }
+    
 }
