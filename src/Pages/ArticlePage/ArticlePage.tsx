@@ -13,6 +13,7 @@ import DateComments from 'components/DateComments/DateComments'
 import Author from 'components/Author/Author'
 import LabelCategory from 'components/LabelCategory/LabelCategory'
 import AboutAuthor from 'components/Author/AboutAuthor'
+import NextPrev from 'components/NextPrev/NextPrev'
 
 type Props = {}
 
@@ -81,6 +82,7 @@ const ArticlePage = (props: Props) => {
                         image="/images/author1_big.jpeg"
                         text="Hello! My name is Robert Fox!, Actively writing articles for this blog . I really like tutorials and illustrations, stay alert next tutorials."
                     />
+                    <NextPrev id={Number(id)}/>
                     <Reviews />
                 </Grid>
                 <Grid item xs={4}>
