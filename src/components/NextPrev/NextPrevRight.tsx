@@ -7,14 +7,13 @@ type Props = {
     id: number
 }
 
-const NextPrevLeft = ({ id }: Props) => {
+const NextPrevRight = ({ id }: Props) => {
     return (
-        <div className="next-prev-left">
+        <div className="next-prev-right">
             <div className="box">
                 <img src={articlesArray[id].image} alt="" />
             </div>
             <div className="most-read-item-text">
-                <div>Previous Post</div>
                 <div className="title2">
                     <Link to={`/articles/${id}`}>
                         {articlesArray[id].title}
@@ -25,4 +24,4 @@ const NextPrevLeft = ({ id }: Props) => {
     )
 }
 
-export default NextPrevLeft
+export default NextPrevRight

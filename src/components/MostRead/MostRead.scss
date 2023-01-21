@@ -14,21 +14,30 @@
         margin-top: 30px;
         display: flex;
         align-items: center;
-        .box {
-            position: relative;
-            overflow:hidden;
-            width:100%;
-            height:150px;
+        // .box {
+        //     position: relative;
+        //     overflow:hidden;
+        //     width:100%;
+        //     height:150px;
+        //     img {
+        //         position: absolute;
+        //         top:50%;
+        //         left:50%;
+        //         transform:translate(-50%,-50%);
+        //         width:100%;
+        //         height:150px;
+        //         object-fit:cover;
+        //     }
+        // } 
+        .box{
+            width: 300px;
+            height: 150px;
+            overflow: hidden;        
             img {
-                position: absolute;
-                top:50%;
-                left:50%;
-                transform:translate(-50%,-50%);
-                width:100%;
-                height:150px;
-                object-fit:cover;
+               width: 100%;
+              height: auto;        
             }
-        }      
+        }     
     }
     .most-read-item-text{
         margin-left: 30px;
