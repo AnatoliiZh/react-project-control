@@ -2,6 +2,7 @@ import React from 'react'
 import ArticlesListItem from 'components/Articles/ArticlesListItem'
 import articlesArray from 'utils/articlesArray'
 import { Container, Grid } from '@mui/material'
+import 'Pages/Pages.scss'
 
 type ArticleProps = {
     id: number
@@ -24,6 +25,8 @@ type ArticlesLikeState = {
 const BlogPage = ({ changeLike, articlesLikeState }: Props) => {
   return (
     <Container maxWidth='lg'>
+        <div className="title">Blog</div>
+        
     <Grid
         container
         direction="row"
