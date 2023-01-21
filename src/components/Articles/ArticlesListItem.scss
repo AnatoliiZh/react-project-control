@@ -3,7 +3,7 @@
     position: relative;
         
     
-    .article-title {
+    .article-title a {
         text-align: left;
         font-size: 22px;
         line-height: 26px;
@@ -15,7 +15,7 @@
         padding: 0 30px;      
         
     }
-    .article-title:hover {
+    .article-title:hover a{
         color: #bd9b84;
         cursor: pointer;
         

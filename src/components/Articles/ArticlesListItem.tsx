@@ -10,6 +10,7 @@ import { FaHeart } from 'react-icons/fa'
 
 import LinkItem from 'components/LinkItem/LinkItem'
 import DateComments from 'components/DateComments/DateComments'
+import { Link } from 'react-router-dom'
 
 type Props = {
     id: number
@@ -58,7 +59,7 @@ const ArticlesListItem = ({
                     <img src={image}  alt="" />
                 </div>
 
-                <div className="article-title">{title}</div>
+                <div className="article-title"><Link to={`/articles/${id}`}>{title}</Link> </div>
                 <div className="under-title">
                     <div className="cat-date-com">
                         <div className="link-category">

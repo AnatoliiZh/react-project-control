@@ -1,30 +1,34 @@
 import React from 'react'
-// import { Grid } from '@mui/material'
+import { useParams } from 'react-router-dom'
+import { Container } from '@mui/material'
 import articlesArray from 'utils/articlesArray'
-import './ArticlesInOneCategory.scss'
-import ArticlesInOneCategoryItem from './ArticlesInOneCategoryItem'
+import 'Pages/Pages.scss'
+import ArticlesInOneCategoryItem from 'components/ArticlesInOneCategory/ArticlesInOneCategoryItem'
 
-type Props = {
-    category: string
-}
+
+type Props = {}
 
 type ArticleProps = {
-    id: number
-    title: string
-    category: string
-    date: string
-    comments: number
-    image: string
-    description?: string
+  id: number
+  title: string
+  category: string
+  date: string
+  comments: number
+  image: string
+  description?: string
 }
 
-const ArticlesInOneCategory = ({ category }: Props) => {
-    return (
-        <div className="category">
+const ArticlePage = (props: Props) => {
+  const {id} = useParams()
+  // console.log(id)
+  return (
+    <Container maxWidth="lg">
+            <div className="title">Article Page</div>
+            <div className="category">
             {/* <Grid container spacing={6}>
                 <Grid item xs={8}> */}
             {articlesArray
-                .filter((filtered) => filtered.category === category)
+                .filter((filtered) => filtered.id === Number(id))
                 .map(
                     ({
                         id,
@@ -34,7 +38,7 @@ const ArticlesInOneCategory = ({ category }: Props) => {
                         comments,
                         image,
                         description,
-                    }: ArticleProps) => (
+                    }: ArticleProps) => (                  
                         <ArticlesInOneCategoryItem
                             title={title}
                             category={category}
@@ -47,7 +51,8 @@ const ArticlesInOneCategory = ({ category }: Props) => {
                 )}
             
         </div>
-    )
+        </Container>
+  )
 }
 
-export default ArticlesInOneCategory
+export default ArticlePage
