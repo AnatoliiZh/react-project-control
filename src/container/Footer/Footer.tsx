@@ -35,7 +35,9 @@ const Footer = (props: Props) => {
                                 <li className="footer-list-item">
                                     <LinkItem to={`/About`}>About</LinkItem>
                                 </li>
-                                <li>Blog</li>
+                                <li className="footer-list-item">
+                                    <LinkItem to={`/Blog`}>Blog</LinkItem>
+                                </li>
                                 <li className="footer-list-item">
                                     <LinkItem to={`/`}>Home</LinkItem>
                                 </li>
@@ -51,7 +53,9 @@ const Footer = (props: Props) => {
                                 <li className="footer-list-item">
                                     <LinkItem to={`/About`}>About</LinkItem>
                                 </li>
-                                <li>Blog</li>
+                                <li className="footer-list-item">
+                                    <LinkItem to={`/Blog`}>Blog</LinkItem>
+                                </li>
                                 <li className="footer-list-item">
                                     <LinkItem to={`/`}>Home</LinkItem>
                                 </li>

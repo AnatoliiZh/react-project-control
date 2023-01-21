@@ -4,26 +4,24 @@ import articlesArray from 'utils/articlesArray'
 import { Container, Grid } from '@mui/material'
 
 type ArticleProps = {
-  id: number
-  title: string
-  category: string
-  date: string
-  comments: number
-  image: string
+    id: number
+    title: string
+    category: string
+    date: string
+    comments: number
+    image: string
 }
 
 type Props = {
     changeLike: (id: number) => void
     articlesLikeState: ArticlesLikeState
-    
 }
 
 type ArticlesLikeState = {
     [id: number]: boolean
 }
 
-const FavoritePage = ({ changeLike, articlesLikeState }: Props) => { 
-  console.log(articlesLikeState)
+const BlogPage = ({ changeLike, articlesLikeState }: Props) => {
   return (
     <Container maxWidth='lg'>
     <Grid
@@ -33,8 +31,7 @@ const FavoritePage = ({ changeLike, articlesLikeState }: Props) => {
         alignItems="center"
         spacing={4}
     >
-        {articlesArray.filter((filtered) => articlesLikeState[filtered.id] === true).map(
-        // {articlesArray.map(
+        {articlesArray.map(
                 ({
                     id,
                     title,
@@ -63,4 +60,4 @@ const FavoritePage = ({ changeLike, articlesLikeState }: Props) => {
   )
 }
 
-export default FavoritePage
+export default BlogPage

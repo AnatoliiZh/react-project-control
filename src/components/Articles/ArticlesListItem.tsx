@@ -36,11 +36,7 @@ const ArticlesListItem = ({
     changeLike,
     articlesLikeState,
 }: Props) => {
-    // const [like, setLike] = useState<boolean>(false)
-
-    // const onLikeClick = () => {
-    //     setLike((prevState: boolean) => !prevState)
-    // }
+   
     return (
         <Card
             className="article"
@@ -58,8 +54,8 @@ const ArticlesListItem = ({
                     // borderRadius: '0px',
                 }}
             >
-                <div className="gradient">
-                    <img src={image} width="100%" alt="" />
+                <div className="gradient article-box-img">
+                    <img src={image}  alt="" />
                 </div>
 
                 <div className="article-title">{title}</div>
