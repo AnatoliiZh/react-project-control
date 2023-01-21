@@ -10,7 +10,7 @@ const Menu = (props: Props) => {
                 <MenuItem to="/fashion">Fashion</MenuItem>
                 <MenuItem to="/health">Health</MenuItem>
                 <MenuItem to="/lifestyle">Lifestyle</MenuItem>
-                <MenuItem to="/travel">Travel</MenuItem>
+                <MenuItem to="/reviews">Reviews</MenuItem>
                 <MenuItem to="/blog">Blog</MenuItem>
                 <MenuItem to="/favorite">Favorite</MenuItem>
             </div>
