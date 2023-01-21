@@ -36,6 +36,7 @@ const ArticlesInOneCategory = ({ category }: Props) => {
                         description,
                     }: ArticleProps) => (
                         <ArticlesInOneCategoryItem
+                            id={id}
                             title={title}
                             category={category}
                             date={date}

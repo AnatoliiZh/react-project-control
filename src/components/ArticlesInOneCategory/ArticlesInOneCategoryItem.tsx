@@ -6,8 +6,10 @@ import DateComments from 'components/DateComments/DateComments'
 import Author from 'components/Author/Author'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import LabelCategory from 'components/LabelCategory/LabelCategory'
+import { Link } from 'react-router-dom'
 
 type Props = {
+    id: number
     title: string
     category: string
     date: string
@@ -17,6 +19,7 @@ type Props = {
 }
 
 const ArticlesInOneCategoryItem = ({
+    id,
     title,
     category,
     date,
@@ -28,17 +31,20 @@ const ArticlesInOneCategoryItem = ({
         <div className="category-item">
             <div className="box">
                 <img src={image} alt="" />
-            </div>            
+            </div>
             <LabelCategory category={category} />
-
-            <div className="category-title">{title}</div>
+            <div className="category-title">
+                <Link to={`/articles/${id}`}>{title}</Link>
+            </div>
             <div className="under-title-category">
                 <Author author="Robert Fox" image="/images/author1.jpeg" />
                 <DateComments date={date} comments={comments} />
             </div>
             <div className="category-description">{description}</div>
             <div className="category-continue">
-                <div className="category-continue-title">Continue Reading</div>
+                <div className="category-continue-title">
+                    <Link to={`/articles/${id}`}>Continue Reading</Link>
+                </div>
                 <div className="category-continue-arrow-box">
                     <ArrowForwardIcon className="category-continue-arrow" />
                 </div>

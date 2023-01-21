@@ -65,9 +65,6 @@ const ArticlePage = (props: Props) => {
                                                 comments={comments}
                                             />
                                         </div>
-                                        {/* <div className="article-description">
-                                            {description}
-                                        </div> */}
                                         <div
                                             className="article-content"
                                             dangerouslySetInnerHTML={{
@@ -84,6 +81,7 @@ const ArticlePage = (props: Props) => {
                     <Search />
                     <Categories />
                     <SocialProfiles />
+                    <LabelCategory category="Health" />
                 </Grid>
             </Grid>
         </Container>

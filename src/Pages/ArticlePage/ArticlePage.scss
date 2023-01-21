@@ -1,9 +1,10 @@
 .article{
 
     // margin-top: 30px;
-    
+    font-family: "Manrope";
     .article-item{
         margin-bottom: 70px;
+        
         .box {
             position: relative;
             overflow:hidden;
@@ -34,29 +35,46 @@
             font-weight: 500;
             font-family: Manrope;
             margin-top: 25px;
-            margin-bottom: 25px;  
+            margin-bottom: 25px;
+              
         }    
-         
-        // .box 
-
-        // .category-category {        
-        //     // height: 20px;
-        //     width: 100px;
-        //     background-color: #fd2a42;    
-        //     padding: 6px 22px;    
-        //     margin-bottom: 5px;
-        //     margin-top: 50px;
-        //     text-align: center;
-        // }
+        p{
+            font-size: 16px;
+            line-height: 1.75;
+            color: #111;
+            font-family: "Manrope";
+            margin: 10px 0;
+        }
+        p:first-child{
+            margin-top: 20px;
+        }
+        h3{
+            font-family: "Syne", Sans-serif;
+            font-size: 25px;
+        } 
+        .quote{
+            background-color: rgba(243, 248, 251, 0.6);
+            color: #555;
+            text-align: center;
+            padding: 50px;
+            line-height: 1.3em;    
+            font-weight: 600;
+            font-size: 20px;
+            font-family: "Manrope";
+            position: relative; 
         
-        // .category-category a {        
-        //     text-decoration: none;
-        //     color: white;
-        //     font-size: 14px;
-        //     line-height: 21px;
-        //     font-weight: 500;
-        //     font-family: Manrope;    
-        // }
+        }
+        
+        .quote::before{
+            content: '\201c	';
+            position: absolute;
+            top: 80px;
+            left: 40px;    
+            font-size: 250px;
+            font-weight: 700;
+            color: rgb(255 53 36 / 10%);
+        
+        }
         
         
           
@@ -82,3 +100,21 @@
     }
 }
 
+.article-category {        
+    // height: 20px;
+    width: 100px;
+    background-color: #fd2a42;    
+    padding: 6px 22px;    
+    margin-bottom: 5px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.article-category a {        
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    font-family: Manrope;    
+}
