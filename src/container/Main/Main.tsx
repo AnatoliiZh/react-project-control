@@ -25,6 +25,7 @@ type ArticlesLikeState = {
 const Main = ({ changeLike, articlesLikeState }: Props) => {
     return (
         // <Container maxWidth={false} sx={{ padding: '50px 0' }}>
+                    
         <Routes>
             <Route
                 path="/"
@@ -69,6 +70,7 @@ const Main = ({ changeLike, articlesLikeState }: Props) => {
                 }
             />
         </Routes>
+        
         // </Container>
     )
 }

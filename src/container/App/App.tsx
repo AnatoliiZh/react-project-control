@@ -5,6 +5,7 @@ import Main from 'container/Main/Main'
 import Footer from 'container/Footer/Footer'
 import { useState } from 'react'
 
+
 type Props = {}
 
 type ArticlesLikeState = {
@@ -24,6 +25,7 @@ const App = (props: Props) => {
             [id]: !prevState[id],
         }))
     }
+    
     return (
         <StyledEngineProvider injectFirst>
             <CssBaseline />

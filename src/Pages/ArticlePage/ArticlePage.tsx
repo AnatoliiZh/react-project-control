@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Container } from '@mui/material'
 import articlesArray from 'utils/articlesArray'
@@ -15,6 +15,7 @@ import LabelCategory from 'components/LabelCategory/LabelCategory'
 import AboutAuthor from 'components/Author/AboutAuthor'
 import NextPrev from 'components/NextPrev/NextPrev'
 import RelatedPosts from 'components/RelatedPosts/RelatedPosts'
+import ButtonToTop from 'components/ButtonToTop/ButtonToTop'
 
 type Props = {
     changeLike: (id: number) => void
@@ -37,13 +38,18 @@ type ArticleProps = {
 
 const ArticlePage = ({ changeLike, articlesLikeState }: Props) => {
     const { id } = useParams()
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
+     
     // let category = articlesArray[Number(id)].category
     // console.log(id)
     return (
         <Container maxWidth="lg">
             <Grid container spacing={6}>
                 <Grid item xs={8}>
-                    <div className="article">
+                    <div className="article" >
                         {articlesArray
                             .filter((filtered) => filtered.id === Number(id))
                             .map(
@@ -104,6 +110,7 @@ const ArticlePage = ({ changeLike, articlesLikeState }: Props) => {
                 articlesLikeState={articlesLikeState}
                 category={articlesArray[Number(id)].category}
             />
+            <ButtonToTop/>
         </Container>
     )
 }
