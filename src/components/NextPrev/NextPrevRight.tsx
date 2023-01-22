@@ -8,6 +8,7 @@ type Props = {
 }
 
 const NextPrevRight = ({ id }: Props) => {
+    
     return (
         <div className="next-prev-right">
             <div className="box">

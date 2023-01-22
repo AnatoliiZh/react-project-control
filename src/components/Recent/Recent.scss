@@ -13,12 +13,18 @@
     
     .recent-item-text{
         margin-left: 30px;
-    }
-    .title2{
-        font-family: "Syne", Sans-serif;
-        font-size: 28px;
-        font-weight: 700;
-        line-height: 1.1em;
+        .title2 a{
+            font-family: "Syne", Sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.1em;
+            text-decoration: none;
+            color: #000;
+        }
+        .title2:hover a{
+            color: #bd9b84;
+
+        }
     }
     .recent-description{
         color: #555555;

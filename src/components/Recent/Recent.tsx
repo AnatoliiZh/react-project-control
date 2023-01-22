@@ -41,6 +41,7 @@ const Recent = ({ id1, id2}: Props) => {
                     
                 }: RecentProps) => (
                     <RecentItem
+                        id={id}
                         title={title}
                         
                         date={date}

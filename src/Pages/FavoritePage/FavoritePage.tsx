@@ -26,8 +26,12 @@ type ArticlesLikeState = {
 const FavoritePage = ({ changeLike, articlesLikeState }: Props) => { 
   // console.log(articlesLikeState)
   return (
+<div className='favorite'>
     <Container maxWidth='lg'>
       <div className="title">Favorite</div>
+      <div className='favorite-message'>
+      {(articlesArray.filter((filtered) => articlesLikeState[filtered.id] === true).length === 0) && <h2>You have not favorite articles</h2>}
+    </div>
     <Grid
         container
         direction="row"
@@ -35,6 +39,7 @@ const FavoritePage = ({ changeLike, articlesLikeState }: Props) => {
         alignItems="center"
         spacing={4}
     >
+     
         {articlesArray.filter((filtered) => articlesLikeState[filtered.id] === true).map(
         // {articlesArray.map(
                 ({
@@ -45,7 +50,7 @@ const FavoritePage = ({ changeLike, articlesLikeState }: Props) => {
                     comments,
                     image,
                 }: ArticleProps) => (
-                    <Grid item xs={12} sm={6} md={6} key={id}>
+                    <Grid item xs={12} sm={4} md={4} key={id}>
                         
                         <ArticlesListItem
                             id={id}
@@ -62,6 +67,7 @@ const FavoritePage = ({ changeLike, articlesLikeState }: Props) => {
             )}
     </Grid>
     </Container>
+    </div>
   )
 }
 

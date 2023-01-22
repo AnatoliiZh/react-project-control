@@ -43,7 +43,7 @@ const BlogPage = ({ changeLike, articlesLikeState }: Props) => {
                     comments,
                     image,
                 }: ArticleProps) => (
-                    <Grid item xs={12} sm={6} md={6} key={id}>
+                    <Grid item xs={12} sm={4} md={4} key={id}>
                         
                         <ArticlesListItem
                             id={id}

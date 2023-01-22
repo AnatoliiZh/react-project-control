@@ -3,10 +3,12 @@ import React from 'react'
 import './Recent.scss'
 import DateComments from 'components/DateComments/DateComments'
 import Author from 'components/Author/Author'
+import { Link } from 'react-router-dom'
 
 
 
 type Props = {
+    id:number
     title: string
     
     date: string
@@ -15,7 +17,7 @@ type Props = {
     description?: string
 }
 
-const RecentItem = ({ title, date, comments, image, description }: Props) => {
+const RecentItem = ({ id, title, date, comments, image, description }: Props) => {
     return (
         <div className="recent-item">
             <div className="recent-box">
@@ -23,7 +25,7 @@ const RecentItem = ({ title, date, comments, image, description }: Props) => {
             </div> 
             {/* <img src={image} width="400px" alt="" /> */}
             <div className="recent-item-text">
-                <div className="title2">{title}</div>
+                <div className="title2"><Link to={`/articles/${id}`}>{title}</Link></div>
                 <div className="recent-description">{description}</div>
                 <div className="recent-under-title">
                    
