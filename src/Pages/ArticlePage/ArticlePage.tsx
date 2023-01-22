@@ -43,7 +43,7 @@ const ArticlePage = ({ changeLike, articlesLikeState }: Props) => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
     }, [])
 
-    // let category = articlesArray[Number(id)].category
+    // console.log(articlesArray[Number(id)].category)
     // console.log(id)
     return (
         <Container maxWidth="lg">
@@ -108,7 +108,7 @@ const ArticlePage = ({ changeLike, articlesLikeState }: Props) => {
             <RelatedPosts
                 changeLike={changeLike}
                 articlesLikeState={articlesLikeState}
-                category={articlesArray[Number(id)].category}
+                category={articlesArray[Number(id) - 1].category}
             />
             <ButtonToTop />
         </Container>

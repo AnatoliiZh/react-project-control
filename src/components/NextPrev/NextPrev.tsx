@@ -8,17 +8,11 @@ type Props = {
 }
 
 const NextPrev = ({ id }: Props) => {
-    // console.log(articlesArray[1])
+    // console.log(articlesArray.length)
     return (
         <div className="next-prev">
-            <NextPrevLeft id={id > 1 ? id - 1 : 1} />
-            <NextPrevRight
-                id={
-                    id < articlesArray.length - 1
-                        ? id + 1
-                        : articlesArray.length - 1
-                }
-            />
+            <NextPrevLeft id={id > 1 ? id - 1 : articlesArray.length} />
+            <NextPrevRight id={id < articlesArray.length ? id + 1 : 1} />
         </div>
     )
 }
