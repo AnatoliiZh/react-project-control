@@ -15,6 +15,7 @@ import LabelCategory from 'components/LabelCategory/LabelCategory'
 import AboutAuthor from 'components/Author/AboutAuthor'
 import NextPrev from 'components/NextPrev/NextPrev'
 import RelatedPosts from 'components/RelatedPosts/RelatedPosts'
+import LinkItem from 'components/LinkItem/LinkItem'
 
 type Props = {
     changeLike: (id: number) => void
