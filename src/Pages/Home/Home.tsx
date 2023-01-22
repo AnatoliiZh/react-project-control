@@ -47,16 +47,16 @@ const Home = ({ changeLike, articlesLikeState }: Props) => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <img src="/images/1crop.webp" alt="слайд 1" />
+                    <img src="/images/1.webp" alt="слайд 1" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="/images/2crop.webp" alt="слайд 2" />
+                    <img src="/images/2.webp" alt="слайд 2" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="/images/3crop.webp" alt="слайд 3" />
+                    <img src="/images/3.webp" alt="слайд 3" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="/images/4crop.webp" alt="слайд 4" />
+                    <img src="/images/4.webp" alt="слайд 4" />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src="/images/5.webp" alt="слайд 5" />
