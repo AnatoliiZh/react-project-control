@@ -7,15 +7,23 @@ import Search from 'components/Search/Search'
 import Categories from 'components/Categories/Categories'
 import SocialProfiles from 'components/SocialProfiles/SocialProfiles'
 
-type Props = {}
+type Props = {
+    changeLike: (id: number) => void
+    articlesLikeState: ArticlesLikeState
+}
 
-const LifestylePage = (props: Props) => {
+type ArticlesLikeState = {
+    [id: number]: boolean
+}
+
+const LifestylePage = ({articlesLikeState, changeLike}: Props) => {
     return (
         <Container maxWidth="lg">
             <div className="title">Category : Lifestyle</div>
             <Grid container spacing={6}>
                 <Grid item xs={8}>
-                    <ArticlesInOneCategory category="Lifestyle" />
+                    <ArticlesInOneCategory category="Lifestyle" changeLike={changeLike}
+                            articlesLikeState={articlesLikeState}/>
                 </Grid>
                 <Grid item xs={4}>
                     <Search />

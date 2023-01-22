@@ -6,6 +6,12 @@ import ArticlesInOneCategoryItem from './ArticlesInOneCategoryItem'
 
 type Props = {
     category: string
+    changeLike: (id: number) => void
+    articlesLikeState: ArticlesLikeState
+}
+
+type ArticlesLikeState = {
+    [id: number]: boolean
 }
 
 type ArticleProps = {
@@ -18,7 +24,8 @@ type ArticleProps = {
     description?: string
 }
 
-const ArticlesInOneCategory = ({ category }: Props) => {
+const ArticlesInOneCategory = ({ changeLike,
+    articlesLikeState, category }: Props) => {
     return (
         <div className="category">
             {/* <Grid container spacing={6}>
@@ -43,6 +50,8 @@ const ArticlesInOneCategory = ({ category }: Props) => {
                             comments={comments}
                             image={image}
                             description={description}
+                            changeLike={changeLike}
+                            articlesLikeState={articlesLikeState}
                             key={id}
                         />
                     )

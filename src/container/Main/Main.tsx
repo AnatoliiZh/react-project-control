@@ -37,10 +37,14 @@ const Main = ({ changeLike, articlesLikeState }: Props) => {
                 }
             />
             <Route path="about" element={<AboutPage />} />
-            <Route path="fashion" element={<FashionPage />} />
-            <Route path="health" element={<HealthPage />} />
-            <Route path="lifestyle" element={<LifestylePage />} />
-            <Route path="travel" element={<TravelPage />} />
+            <Route path="fashion" element={<FashionPage changeLike={changeLike}
+                            articlesLikeState={articlesLikeState}/>} />
+            <Route path="health" element={<HealthPage changeLike={changeLike}
+                            articlesLikeState={articlesLikeState}/>} />
+            <Route path="lifestyle" element={<LifestylePage changeLike={changeLike}
+                            articlesLikeState={articlesLikeState}/>} />
+            <Route path="travel" element={<TravelPage changeLike={changeLike}
+                            articlesLikeState={articlesLikeState}/>} />
             <Route path="reviews" element={<ReviewPage />} />
             <Route
                 path="blog"
