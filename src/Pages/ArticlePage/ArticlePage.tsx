@@ -14,8 +14,16 @@ import Author from 'components/Author/Author'
 import LabelCategory from 'components/LabelCategory/LabelCategory'
 import AboutAuthor from 'components/Author/AboutAuthor'
 import NextPrev from 'components/NextPrev/NextPrev'
+import RelatedPosts from 'components/RelatedPosts/RelatedPosts'
 
-type Props = {}
+type Props = {
+    changeLike: (id: number) => void
+    articlesLikeState: ArticlesLikeState
+}
+
+type ArticlesLikeState = {
+    [id: number]: boolean
+}
 
 type ArticleProps = {
     id: number
@@ -27,7 +35,8 @@ type ArticleProps = {
     content: string
 }
 
-const ArticlePage = (props: Props) => {
+
+const ArticlePage = ({ changeLike, articlesLikeState }: Props) => {
     const { id } = useParams()
     // console.log(id)
     return (
@@ -92,6 +101,7 @@ const ArticlePage = (props: Props) => {
                     
                 </Grid>
             </Grid>
+            <RelatedPosts changeLike={changeLike} articlesLikeState={articlesLikeState } />
         </Container>
     )
 }

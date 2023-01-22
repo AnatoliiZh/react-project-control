@@ -43,7 +43,8 @@ const Main = ({ changeLike, articlesLikeState }: Props) => {
                         articlesLikeState={articlesLikeState}/>} />
             <Route path="favorite" element={<FavoritePage changeLike={changeLike}
                         articlesLikeState={articlesLikeState}/>} />
-            <Route path="articles/:id" element={<ArticlePage/>} />
+            <Route path="articles/:id" element={<ArticlePage changeLike={changeLike}
+                            articlesLikeState={articlesLikeState}/>} />
                       
                         
         </Routes>

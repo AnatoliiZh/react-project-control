@@ -41,17 +41,17 @@
 }
 
 .recent-box {
-    position: relative;
-    overflow:hidden;
-    width:150%;
+    // position: relative;
+    // overflow:hidden;
+    width:350px;
     height:350px;
     img {
     
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform:translate(-50%,-50%);
-        width:150%;
+        // position: absolute;
+        // top:50%;
+        // left:50%;
+        // transform:translate(-50%,-50%);
+        width:350px;
         height:350px;
         object-fit:cover;
     }

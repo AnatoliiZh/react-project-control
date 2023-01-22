@@ -30,12 +30,13 @@
         //     }
         // } 
         .box{
-            width: 300px;
+            width: 150px;
             height: 150px;
-            overflow: hidden;        
+            // overflow: hidden;        
             img {
-               width: 100%;
-              height: auto;        
+               width: 150px;
+              height: 150px;
+              object-fit: cover;       
             }
         }     
     }
