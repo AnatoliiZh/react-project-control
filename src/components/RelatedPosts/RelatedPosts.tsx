@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Grid } from '@mui/material'
 // import articlesArray from 'utils/articlesArray'
-import './ArticlesInOneCategory.scss'
+import './RelatedPosts.scss'
 // import ArticlesListItem from './ArticlesListItem'
 import articlesArray from 'utils/articlesArray'
 import { Grid } from '@mui/material'
@@ -19,16 +19,19 @@ type ArticleProps = {
 type Props = {
     changeLike: (id: number) => void
     articlesLikeState: ArticlesLikeState
-    
+    category: string
 }
 
 type ArticlesLikeState = {
     [id: number]: boolean
 }
 
-const RelatedPosts = ({ changeLike, articlesLikeState }: Props) => {
+const RelatedPosts = ({ changeLike, articlesLikeState, category }: Props) => {
     return (
-        <Grid
+        <div className="related">
+            <div className="related-title">Related Posts</div>
+
+            <Grid
                 container
                 direction="row"
                 justifyContent="space-around"
@@ -36,7 +39,8 @@ const RelatedPosts = ({ changeLike, articlesLikeState }: Props) => {
                 spacing={4}
             >
                 {articlesArray
-                    .filter((filtered) => filtered.category === "Fashion")
+                    .filter((filtered) => filtered.category === category)
+                    .slice(0, 3)
                     .map(
                         ({
                             id,
@@ -47,7 +51,6 @@ const RelatedPosts = ({ changeLike, articlesLikeState }: Props) => {
                             image,
                         }: ArticleProps) => (
                             <Grid item xs={12} sm={4} md={4} key={id}>
-                            
                                 <ArticlesListItem
                                     id={id}
                                     title={title}
@@ -62,9 +65,8 @@ const RelatedPosts = ({ changeLike, articlesLikeState }: Props) => {
                         )
                     )}
             </Grid>
+        </div>
     )
 }
 
 export default RelatedPosts
-
-

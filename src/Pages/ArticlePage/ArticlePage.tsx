@@ -35,13 +35,12 @@ type ArticleProps = {
     content: string
 }
 
-
 const ArticlePage = ({ changeLike, articlesLikeState }: Props) => {
     const { id } = useParams()
+    // let category = articlesArray[Number(id)].category
     // console.log(id)
     return (
         <Container maxWidth="lg">
-            {/* <div className="title">Article Page</div> */}
             <Grid container spacing={6}>
                 <Grid item xs={8}>
                     <div className="article">
@@ -91,17 +90,20 @@ const ArticlePage = ({ changeLike, articlesLikeState }: Props) => {
                         image="/images/author1_big.jpeg"
                         text="Hello! My name is Robert Fox!, Actively writing articles for this blog . I really like tutorials and illustrations, stay alert next tutorials."
                     />
-                    <NextPrev id={Number(id)}/>
+                    <NextPrev id={Number(id)} />
                     <Reviews />
                 </Grid>
                 <Grid item xs={4}>
                     <Search />
                     <Categories />
                     <SocialProfiles />
-                    
                 </Grid>
             </Grid>
-            <RelatedPosts changeLike={changeLike} articlesLikeState={articlesLikeState } />
+            <RelatedPosts
+                changeLike={changeLike}
+                articlesLikeState={articlesLikeState}
+                category={articlesArray[Number(id)].category}
+            />
         </Container>
     )
 }
