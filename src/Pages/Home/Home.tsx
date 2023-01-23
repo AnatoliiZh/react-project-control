@@ -1,7 +1,9 @@
-import { Typography } from '@mui/material'
+// import { Typography } from '@mui/material'
 import ArticlesList from 'components/Articles/ArticlesList'
 import { Grid } from '@mui/material'
 import './Home.scss'
+import EastIcon from '@mui/icons-material/East'
+import WestIcon from '@mui/icons-material/West'
 import { Container } from '@mui/material'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -16,6 +18,8 @@ import Social from 'components/Social/Social'
 import RecentMost from 'components/RecentMost/RecentMost'
 import Slider from 'components/Slider/Slider'
 import Subscribe from 'components/Subscribe/Subscribe'
+import { useState } from 'react'
+import articlesArray from 'utils/articlesArray'
 
 type Props = {
     changeLike: (id: number) => void
@@ -27,6 +31,9 @@ type ArticlesLikeState = {
 }
 
 const Home = ({ changeLike, articlesLikeState }: Props) => {
+    const [startId, setStartId] = useState(1)
+    console.log(startId)
+
     return (
         <>
             <Swiper
@@ -66,22 +73,33 @@ const Home = ({ changeLike, articlesLikeState }: Props) => {
                 </SwiperSlide>
             </Swiper>
             <Container maxWidth="xl" sx={{ padding: '50px 0' }}>
-                <Typography
-                    align="left"
-                    component="h2"
-                    sx={{
-                        marginBottom: '30px',
-                        fontFamily: 'Syne',
-                        fontSize: '30px',
-                    }}
-                >
-                    Popular Stories{''}
-                </Typography>
+                <div className="popular-up">
+                    <div className="popular-up-heading">Popular Stories</div>
+                    <div className="popular-arrows">
+                        <WestIcon
+                            className="left-up"
+                            onClick={() =>
+                                setStartId(startId > 1 ? startId - 1 : 1)
+                            }
+                        />
+                        <EastIcon
+                            className="right-up"
+                            onClick={() =>
+                                setStartId(
+                                    startId < articlesArray.length - 3
+                                        ? startId + 1
+                                        : articlesArray.length - 3
+                                )
+                            }
+                        />
+                    </div>
+                </div>
                 <Grid container spacing={2}>
                     <Grid item xs={8}>
                         <ArticlesList
                             changeLike={changeLike}
                             articlesLikeState={articlesLikeState}
+                            startId={startId}
                         />
                     </Grid>
                     <Grid item xs={4}>

@@ -53,3 +53,44 @@
   margin-bottom: 100px;
 }
 
+.popular-up{
+  // margin-top: 50px;    
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  
+  
+  .popular-up-heading{    
+      font-family: Syne;
+      font-size: 30px;
+      font-weight: 700;
+      // line-height: 38px;
+      color: #000;
+  }
+  .popular-arrows{
+    position: relative;
+    .left-up{
+      position: absolute;
+      top:-10px;
+      left: 20px;
+        margin-right: 10px;
+        color: #555555;
+        cursor: pointer;
+    }
+    .left-up:hover {
+        color: rgb(189, 155, 132);
+    }         
+    .right-up{
+      position: absolute;
+      top:-10px;
+      left: 50px;
+        margin-right: 10px;
+        color: #555555;
+        cursor: pointer;
+    }
+    .right-up:hover{
+        color: rgb(189, 155, 132);
+    }         
+  }
+           
+}   

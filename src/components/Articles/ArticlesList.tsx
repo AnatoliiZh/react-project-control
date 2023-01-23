@@ -14,13 +14,14 @@ type ArticleProps = {
 type Props = {
     changeLike: (id: number) => void
     articlesLikeState: ArticlesLikeState
+    startId: number
 }
 
 type ArticlesLikeState = {
     [id: number]: boolean
 }
 
-const ArticlesList = ({ changeLike, articlesLikeState }: Props) => {
+const ArticlesList = ({ changeLike, articlesLikeState, startId }: Props) => {
     return (
         <>
             <Grid
@@ -31,7 +32,10 @@ const ArticlesList = ({ changeLike, articlesLikeState }: Props) => {
                 spacing={4}
             >
                 {articlesArray
-                    .filter((filtered) => filtered.id >= 1 && filtered.id <= 4)
+                    .filter(
+                        (filtered) =>
+                            filtered.id >= startId && filtered.id <= startId + 3
+                    )
                     .map(
                         ({
                             id,
