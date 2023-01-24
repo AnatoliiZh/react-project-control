@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { Container } from '@mui/material'
 import { Grid } from '@mui/material'
@@ -7,6 +7,7 @@ import ArticlesInOneCategory from 'components/ArticlesInOneCategory/ArticlesInOn
 import Search from 'components/Search/Search'
 import Categories from 'components/Categories/Categories'
 import SocialProfiles from 'components/SocialProfiles/SocialProfiles'
+import ButtonToTop from 'components/ButtonToTop/ButtonToTop'
 
 type Props = {
     changeLike: (id: number) => void
@@ -19,6 +20,10 @@ type ArticlesLikeState = {
 }
 
 const CategoryPage = ({ articlesLikeState, changeLike, category }: Props) => {
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    }, [])
     return (
         <Container maxWidth="lg">
             <div className="title">Category : {category}</div>
@@ -37,6 +42,8 @@ const CategoryPage = ({ articlesLikeState, changeLike, category }: Props) => {
                     <SocialProfiles />
                 </Grid>
             </Grid>
+            <ButtonToTop />
+            
         </Container>
     )
 }

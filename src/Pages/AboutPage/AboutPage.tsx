@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Container } from '@mui/material'
 import { Grid } from '@mui/material'
 import 'Pages/Pages.scss'
 import './AboutPage.scss'
 import Reviews from 'components/Reviews/Reviews'
+import ButtonToTop from 'components/ButtonToTop/ButtonToTop'
 
 type Props = {}
 
 const AboutPage = (props: Props) => {
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    }, [])
     return (
         <Container className="about" maxWidth="lg">
             <div className="title">About</div>
@@ -105,6 +110,7 @@ const AboutPage = (props: Props) => {
                 seeds.
             </p>
             <Reviews/>
+            <ButtonToTop/>
         </Container>
     )
 }
