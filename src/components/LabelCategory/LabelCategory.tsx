@@ -1,7 +1,8 @@
 import React from 'react'
-// import LinkItem from 'components/LinkItem/LinkItem'
+
 import './LabelCategory.scss'
-import LinkItem from 'components/LinkItem/LinkItem'
+
+import { NavLink } from 'react-router-dom'
 
 type Props = {
     category: string
@@ -13,19 +14,19 @@ const LabelCategory = (
     <div className="label-category">
         {category === "Health" && 
         <div className="label-category-health">
-          <LinkItem  to={`/${category}`}>{category}</LinkItem>
+          <NavLink to={`/${category}`}> {category} </NavLink>
         </div>}
         {category === "Fashion" && 
         <div className="label-category-fashion">
-          <LinkItem  to={`/${category}`}>{category}</LinkItem>
+          <NavLink to={`/${category}`}> {category} </NavLink>
         </div>}
         {category === "Lifestyle" && 
         <div className="label-category-lifestyle">
-          <LinkItem  to={`/${category}`}>{category}</LinkItem>
+          <NavLink to={`/${category}`}> {category} </NavLink>
         </div>}
         {category === "Travel" && 
         <div className="label-category-travel">
-          <LinkItem  to={`/${category}`}>{category}</LinkItem>
+          <NavLink to={`/${category}`}> {category} </NavLink>
         </div>}
     </div>
   )

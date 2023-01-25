@@ -1,6 +1,5 @@
 import React from 'react'
-// import { Card, CardContent } from '@mui/material'
-// import LinkItem from 'components/LinkItem/LinkItem'
+
 import './ArticlesInOneCategory.scss'
 import DateComments from 'components/DateComments/DateComments'
 import Author from 'components/Author/Author'

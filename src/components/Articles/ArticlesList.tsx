@@ -22,6 +22,7 @@ type ArticlesLikeState = {
 }
 
 const ArticlesList = ({ changeLike, articlesLikeState, startId }: Props) => {
+    // console.log((articlesArray[6].category))
     return (
         <>
             <Grid

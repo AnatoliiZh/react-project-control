@@ -32,7 +32,7 @@ type ArticlesLikeState = {
 
 const Home = ({ changeLike, articlesLikeState }: Props) => {
     const [startId, setStartId] = useState(1)
-    console.log(startId)
+    // console.log(startId)
 
     return (
         <>
