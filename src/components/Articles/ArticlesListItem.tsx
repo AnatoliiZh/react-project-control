@@ -11,6 +11,8 @@ import { FaHeart } from 'react-icons/fa'
 import LinkItem from 'components/LinkItem/LinkItem'
 import DateComments from 'components/DateComments/DateComments'
 import { Link } from 'react-router-dom'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { toggleLikeState } from 'redux/likeReducer'
 
 type Props = {
     id: number
@@ -19,8 +21,8 @@ type Props = {
     date: string
     comments: number
     image: string
-    changeLike: (id: number) => void
-    articlesLikeState: ArticlesLikeState
+    changeLike?: (id: number) => void
+    articlesLikeState?: ArticlesLikeState
 }
 
 type ArticlesLikeState = {
@@ -34,10 +36,13 @@ const ArticlesListItem = ({
     date,
     comments,
     image,
-    changeLike,
-    articlesLikeState,
+    // changeLike,
+    // articlesLikeState,
 }: Props) => {
    
+    const isLiked = useAppSelector((state) => state.likeArticles[id])
+    const dispatch = useAppDispatch()
+
     return (
         <Card
             className="article"
@@ -72,8 +77,8 @@ const ArticlesListItem = ({
                         <div className="article-comments">{comments}</div> */}
                         <DateComments date={date} comments={comments} />
                     </div>
-                    <div className="like" onClick={() => changeLike(id)}>
-                        {articlesLikeState[id] ? (
+                    <div className="like" onClick={() => dispatch(toggleLikeState(id))}>
+                        {isLiked ? (
                             <FaHeart className="like-icon" />
                         ) : (
                             <FaRegHeart className="like-icon" />
