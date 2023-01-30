@@ -20,13 +20,7 @@ type Props = {
     category: string
     date: string
     comments: number
-    image: string
-    changeLike?: (id: number) => void
-    articlesLikeState?: ArticlesLikeState
-}
-
-type ArticlesLikeState = {
-    [id: number]: boolean
+    image: string 
 }
 
 const ArticlesListItem = ({
@@ -36,8 +30,6 @@ const ArticlesListItem = ({
     date,
     comments,
     image,
-    // changeLike,
-    // articlesLikeState,
 }: Props) => {
    
     const isLiked = useAppSelector((state) => state.likeArticles[id])
@@ -54,10 +46,7 @@ const ArticlesListItem = ({
         >
             <CardContent
                 sx={{
-                    padding: '0',
-
-                    // border: 'none',
-                    // borderRadius: '0px',
+                    padding: '0',                    
                 }}
             >
                 <div className="gradient article-box-img">
@@ -71,10 +60,7 @@ const ArticlesListItem = ({
                             <LinkItem to={`/${category}`}>{category}</LinkItem>
                         </div>
 
-                        {/* <FaRegClock className="icons" />
-                        <div className="article-date">{date}</div>
-                        <FaRegCommentAlt className="icons" />
-                        <div className="article-comments">{comments}</div> */}
+                        
                         <DateComments date={date} comments={comments} />
                     </div>
                     <div className="like" onClick={() => dispatch(toggleLikeState(id))}>
@@ -84,13 +70,7 @@ const ArticlesListItem = ({
                             <FaRegHeart className="like-icon" />
                         )}
                     </div>
-                    {/* <Button variant="outlined" onClick={() => changeLike(id)}>
-                        {articlesLikeState[id] ? (
-                            <FaHeart className="like" />
-                        ) : (
-                            <FaRegHeart className="like" />
-                        )}
-                    </Button> */}
+                    
                 </div>
             </CardContent>
         </Card>

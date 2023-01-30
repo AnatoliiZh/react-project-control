@@ -14,16 +14,16 @@ type ArticleProps = {
     image: string
 }
 
-type Props = {
-    changeLike: (id: number) => void
-    articlesLikeState: ArticlesLikeState
-}
+// type Props = {
+//     changeLike: (id: number) => void
+//     articlesLikeState: ArticlesLikeState
+// }
 
-type ArticlesLikeState = {
-    [id: number]: boolean
-}
+// type ArticlesLikeState = {
+//     [id: number]: boolean
+// }
 
-const BlogPage = ({ changeLike, articlesLikeState }: Props) => {
+const BlogPage = () => {
     useEffect(() => {
         // 👇️ scroll to top on page load
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
@@ -57,8 +57,8 @@ const BlogPage = ({ changeLike, articlesLikeState }: Props) => {
                             date={date}
                             comments={comments}
                             image={image}
-                            changeLike={changeLike}
-                            articlesLikeState={articlesLikeState}
+                            // changeLike={changeLike}
+                            // articlesLikeState={articlesLikeState}
                         />
                     </Grid>
                 )

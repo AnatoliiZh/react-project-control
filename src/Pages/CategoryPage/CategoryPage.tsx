@@ -10,16 +10,16 @@ import SocialProfiles from 'components/SocialProfiles/SocialProfiles'
 import ButtonToTop from 'components/ButtonToTop/ButtonToTop'
 
 type Props = {
-    changeLike: (id: number) => void
-    articlesLikeState: ArticlesLikeState
+    // changeLike: (id: number) => void
+    // articlesLikeState: ArticlesLikeState
     category: string
 }
 
-type ArticlesLikeState = {
-    [id: number]: boolean
-}
+// type ArticlesLikeState = {
+//     [id: number]: boolean
+// }
 
-const CategoryPage = ({ articlesLikeState, changeLike, category }: Props) => {
+const CategoryPage = ({ category }: Props) => {
     useEffect(() => {
         // 👇️ scroll to top on page load
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
@@ -32,8 +32,8 @@ const CategoryPage = ({ articlesLikeState, changeLike, category }: Props) => {
                 <Grid item xs={8}>
                     <ArticlesInOneCategory
                         category={category}
-                        changeLike={changeLike}
-                        articlesLikeState={articlesLikeState}
+                        // changeLike={changeLike}
+                        // articlesLikeState={articlesLikeState}
                     />
                 </Grid>
                 <Grid item xs={4}>

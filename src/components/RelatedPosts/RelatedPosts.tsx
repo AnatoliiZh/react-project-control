@@ -17,16 +17,16 @@ type ArticleProps = {
 }
 
 type Props = {
-    changeLike: (id: number) => void
-    articlesLikeState: ArticlesLikeState
+    // changeLike: (id: number) => void
+    // articlesLikeState: ArticlesLikeState
     category: string
 }
 
-type ArticlesLikeState = {
-    [id: number]: boolean
-}
+// type ArticlesLikeState = {
+//     [id: number]: boolean
+// }
 
-const RelatedPosts = ({ changeLike, articlesLikeState, category }: Props) => {
+const RelatedPosts = ({ category }: Props) => {
     return (
         <div className="related">
             <div className="related-title">Related Posts</div>
@@ -58,8 +58,8 @@ const RelatedPosts = ({ changeLike, articlesLikeState, category }: Props) => {
                                     date={date}
                                     comments={comments}
                                     image={image}
-                                    changeLike={changeLike}
-                                    articlesLikeState={articlesLikeState}
+                                    // changeLike={changeLike}
+                                    // articlesLikeState={articlesLikeState}
                                 />
                             </Grid>
                         )

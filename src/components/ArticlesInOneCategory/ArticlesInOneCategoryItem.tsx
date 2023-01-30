@@ -8,6 +8,8 @@ import LabelCategory from 'components/LabelCategory/LabelCategory'
 import { Link } from 'react-router-dom'
 import { FaRegHeart } from 'react-icons/fa'
 import { FaHeart } from 'react-icons/fa'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { toggleLikeState } from 'redux/likeReducer'
 
 type Props = {
     id: number
@@ -17,13 +19,13 @@ type Props = {
     comments: number
     image: string
     description?: string
-    changeLike: (id: number) => void
-    articlesLikeState: ArticlesLikeState
+    // changeLike: (id: number) => void
+    // articlesLikeState: ArticlesLikeState
 }
 
-type ArticlesLikeState = {
-    [id: number]: boolean
-}
+// type ArticlesLikeState = {
+//     [id: number]: boolean
+// }
 
 const ArticlesInOneCategoryItem = ({
     id,
@@ -33,14 +35,17 @@ const ArticlesInOneCategoryItem = ({
     comments,
     image,
     description,
-    changeLike,
-    articlesLikeState,
+    // changeLike,
+    // articlesLikeState,
 }: Props) => {
+    const articlesLikeState = useAppSelector((state) => state.likeArticles)
+    const dispatch = useAppDispatch()
+
     return (
         <div className="category-item">
             <div className="box">
                 <img src={image} alt="" />
-                <div className="like" onClick={() => changeLike(id)}>
+                <div className="like" onClick={() => dispatch(toggleLikeState(id))}>
                         {articlesLikeState[id] ? (
                             <FaHeart className="like-icon" />
                         ) : (

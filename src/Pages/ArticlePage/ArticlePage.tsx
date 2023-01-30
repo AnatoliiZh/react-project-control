@@ -17,14 +17,7 @@ import NextPrev from 'components/NextPrev/NextPrev'
 import RelatedPosts from 'components/RelatedPosts/RelatedPosts'
 import ButtonToTop from 'components/ButtonToTop/ButtonToTop'
 
-type Props = {
-    changeLike: (id: number) => void
-    articlesLikeState: ArticlesLikeState
-}
 
-type ArticlesLikeState = {
-    [id: number]: boolean
-}
 
 type ArticleProps = {
     id: number
@@ -36,7 +29,7 @@ type ArticleProps = {
     content: string
 }
 
-const ArticlePage = ({ changeLike, articlesLikeState }: Props) => {
+const ArticlePage = () => {
     const { id } = useParams()
     useEffect(() => {
         // 👇️ scroll to top on page load
@@ -106,8 +99,8 @@ const ArticlePage = ({ changeLike, articlesLikeState }: Props) => {
                 </Grid>
             </Grid>
             <RelatedPosts
-                changeLike={changeLike}
-                articlesLikeState={articlesLikeState}
+                // changeLike={changeLike}
+                // articlesLikeState={articlesLikeState}
                 category={articlesArray[Number(id) - 1].category}
             />
             <ButtonToTop />

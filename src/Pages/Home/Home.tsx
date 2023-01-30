@@ -21,16 +21,16 @@ import Subscribe from 'components/Subscribe/Subscribe'
 import { useState } from 'react'
 import articlesArray from 'utils/articlesArray'
 
-type Props = {
-    changeLike: (id: number) => void
-    articlesLikeState: ArticlesLikeState
-}
+// type Props = {
+//     changeLike: (id: number) => void
+//     articlesLikeState: ArticlesLikeState
+// }
 
-type ArticlesLikeState = {
-    [id: number]: boolean
-}
+// type ArticlesLikeState = {
+//     [id: number]: boolean
+// }
 
-const Home = ({ changeLike, articlesLikeState }: Props) => {
+const Home = () => {
     const [startId, setStartId] = useState(1)
     // console.log(startId)
 
@@ -97,8 +97,8 @@ const Home = ({ changeLike, articlesLikeState }: Props) => {
                 <Grid container spacing={2}>
                     <Grid item xs={8}>
                         <ArticlesList
-                            changeLike={changeLike}
-                            articlesLikeState={articlesLikeState}
+                            // changeLike={changeLike}
+                            // articlesLikeState={articlesLikeState}
                             startId={startId}
                         />
                     </Grid>

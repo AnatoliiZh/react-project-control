@@ -6,7 +6,7 @@ type LikeArticles = {
 
 export const initialState: LikeArticles = {
     1: true,
-    2: true
+    3: true
 }
 
 

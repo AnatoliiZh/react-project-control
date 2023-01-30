@@ -3,6 +3,7 @@ import ArticlesListItem from 'components/Articles/ArticlesListItem'
 import articlesArray from 'utils/articlesArray'
 import { Container, Grid } from '@mui/material'
 import 'Pages/Pages.scss'
+import {  useAppSelector } from 'redux/hooks'
 
 type ArticleProps = {
   id: number
@@ -13,23 +14,18 @@ type ArticleProps = {
   image: string
 }
 
-type Props = {
-    changeLike: (id: number) => void
-    articlesLikeState: ArticlesLikeState
-    
-}
+const FavoritePage = () => { 
+  
+   const articlesLikeState = useAppSelector((state) => state.likeArticles)
+// console.log(articlesLikeState[3])
+// console.log(Object.keys(articlesLikeState))
 
-type ArticlesLikeState = {
-    [id: number]: boolean
-}
-
-const FavoritePage = ({ changeLike, articlesLikeState }: Props) => { 
-  // console.log(articlesLikeState)
   return (
 <div className='favorite'>
     <Container maxWidth='lg'>
       <div className="title">Favorite</div>
       <div className='favorite-message'>
+      {/* {(articlesArray.filter((filtered) => articlesLikeState[filtered.id] === true).length === 0) && <h2>You have not favorite articles</h2>} */}
       {(articlesArray.filter((filtered) => articlesLikeState[filtered.id] === true).length === 0) && <h2>You have not favorite articles</h2>}
     </div>
     <Grid
@@ -40,6 +36,7 @@ const FavoritePage = ({ changeLike, articlesLikeState }: Props) => {
         spacing={4}
     >
      
+        
         {articlesArray.filter((filtered) => articlesLikeState[filtered.id] === true).map(
         // {articlesArray.map(
                 ({
@@ -59,8 +56,7 @@ const FavoritePage = ({ changeLike, articlesLikeState }: Props) => {
                             date={date}
                             comments={comments}
                             image={image}
-                            changeLike={changeLike}
-                            articlesLikeState={articlesLikeState}
+                            
                         />
                     </Grid>
                 )
