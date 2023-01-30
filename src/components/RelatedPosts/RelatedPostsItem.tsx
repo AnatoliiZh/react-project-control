@@ -23,11 +23,11 @@ type Props = {
 const RelatedPostsItem = ({
     id,
     title,
-    // category,
-    date,
-    comments,
+   
+    // date,
+    // comments,
     image,
-    // description,
+    
 }: Props) => {
     return (
         <Grid
@@ -47,10 +47,7 @@ const RelatedPostsItem = ({
         >
             <CardContent
                 sx={{
-                    padding: '0',
-
-                    // border: 'none',
-                    // borderRadius: '0px',
+                    padding: '0',                   
                 }}
             >
 
@@ -61,11 +58,7 @@ const RelatedPostsItem = ({
             
             <div className="category-title">
                 <Link to={`/articles/${id}`}>{title}</Link>
-            </div>
-            {/* <div className="under-title-category">
-                <Author author="Robert Fox" image="/images/author1.jpeg" />
-                <DateComments date={date} comments={comments} />
-            </div> */}
+            </div>         
             
             
         </div>

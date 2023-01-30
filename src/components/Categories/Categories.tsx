@@ -22,12 +22,9 @@ const Categories = (props: Props) => {
 
       
     // for (let key1 in arrCategory) {
-    //     console.log(arrCategory[key1])
-        
+    //     console.log(arrCategory[key1])        
     // }
-    // console.log(arrCategory)
-    // console.log(Object.keys(arrCategory))
-    // console.log(Object.keys(arrCategory)[0])
+    
     // console.log(arrCategory[Object.keys(arrCategory)[0]])
 
     

@@ -4,14 +4,7 @@ import WestIcon from '@mui/icons-material/West'
 // import MostReadArray from 'utils/mostReadArray'
 import './Slider.scss'
 
-// type MostReadProps = {
-//     id: number
-//     title: string
-//     category: string
-//     date: string
-//     comments: number
-//     image: string
-// }
+
 
 type Props = {}
 
@@ -26,10 +19,7 @@ const img = [
 ]
 
 const Slider = (props: Props) => {
-    // let id1 = 0
-    // let id2 = 1
-    // let id3 = 2
-    // let id4 = 3
+    
     // Индекс текущего слайда
     const [id1, setId1] = useState(0)
     const [id2, setId2] = useState(1)
@@ -37,8 +27,7 @@ const Slider = (props: Props) => {
     const [id4, setId4] = useState(3)
     const [id5, setId5] = useState(4)
     const [id6, setId6] = useState(5)
-    // const [id7, setId7] = useState(6)
-
+   
     const onRightClick = () => {
         setId1((prevState: number) => (prevState === 0 ? 6 : prevState - 1))
         setId2((prevState: number) => (prevState === 0 ? 6 : prevState - 1))
@@ -46,7 +35,7 @@ const Slider = (props: Props) => {
         setId4((prevState: number) => (prevState === 0 ? 6 : prevState - 1))
         setId5((prevState: number) => (prevState === 0 ? 6 : prevState - 1))
         setId6((prevState: number) => (prevState === 0 ? 6 : prevState - 1))
-        // setId7((prevState: number) => (prevState === 0 ? 6 : prevState - 1))
+       
     }
     const onLeftClick = () => {
         setId1((prevState: number) => (prevState === 6 ? 0 : prevState + 1))
@@ -55,7 +44,7 @@ const Slider = (props: Props) => {
         setId4((prevState: number) => (prevState === 6 ? 0 : prevState + 1))
         setId5((prevState: number) => (prevState === 6 ? 0 : prevState + 1))
         setId6((prevState: number) => (prevState === 6 ? 0 : prevState + 1))
-        // setId7((prevState: number) => (prevState === 6 ? 0 : prevState + 1))
+        
     }
 
     return (
@@ -90,9 +79,7 @@ const Slider = (props: Props) => {
                 <div className="slider-img id6" key={id6}>
                     {img[id6]}
                 </div>
-                {/* <div className="slider-img id7" key={id7}>
-                    {img[id7]}
-                </div> */}
+                
             </div>
         </>
     )

@@ -23,7 +23,7 @@ const RecentItem = ({ id, title, date, comments, image, description }: Props) =>
             <div className="recent-box">
                 <img src={image}  alt="" />
             </div> 
-            {/* <img src={image} width="400px" alt="" /> */}
+           
             <div className="recent-item-text">
                 <div className="title2"><Link to={`/articles/${id}`}>{title}</Link></div>
                 <div className="recent-description">{description}</div>

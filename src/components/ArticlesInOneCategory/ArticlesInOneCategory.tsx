@@ -6,8 +6,7 @@ import ArticlesInOneCategoryItem from './ArticlesInOneCategoryItem'
 
 type Props = {
     category: string
-    // changeLike: (id: number) => void
-    // articlesLikeState: ArticlesLikeState
+    
 }
 
 
@@ -25,8 +24,7 @@ type ArticleProps = {
 const ArticlesInOneCategory = ({  category }: Props) => {
     return (
         <div className="category">
-            {/* <Grid container spacing={6}>
-                <Grid item xs={8}> */}
+            
             {articlesArray
                 .filter((filtered) => filtered.category === category)
                 .map(
@@ -47,8 +45,7 @@ const ArticlesInOneCategory = ({  category }: Props) => {
                             comments={comments}
                             image={image}
                             description={description}
-                            // changeLike={changeLike}
-                            // articlesLikeState={articlesLikeState}
+                            
                             key={id}
                         />
                     )

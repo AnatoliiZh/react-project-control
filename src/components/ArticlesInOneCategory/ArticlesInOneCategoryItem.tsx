@@ -18,14 +18,8 @@ type Props = {
     date: string
     comments: number
     image: string
-    description?: string
-    // changeLike: (id: number) => void
-    // articlesLikeState: ArticlesLikeState
+    description?: string    
 }
-
-// type ArticlesLikeState = {
-//     [id: number]: boolean
-// }
 
 const ArticlesInOneCategoryItem = ({
     id,
@@ -35,8 +29,7 @@ const ArticlesInOneCategoryItem = ({
     comments,
     image,
     description,
-    // changeLike,
-    // articlesLikeState,
+   
 }: Props) => {
     const articlesLikeState = useAppSelector((state) => state.likeArticles)
     const dispatch = useAppDispatch()
