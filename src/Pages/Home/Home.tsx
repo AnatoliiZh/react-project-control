@@ -1,4 +1,4 @@
-// import { Typography } from '@mui/material'
+import { useState } from 'react'
 import ArticlesList from 'components/Articles/ArticlesList'
 import { Grid } from '@mui/material'
 import './Home.scss'
@@ -18,7 +18,6 @@ import Social from 'components/Social/Social'
 import RecentMost from 'components/RecentMost/RecentMost'
 import Slider from 'components/Slider/Slider'
 import Subscribe from 'components/Subscribe/Subscribe'
-import { useState } from 'react'
 import articlesArray from 'utils/articlesArray'
 
 // type Props = {
@@ -100,6 +99,7 @@ const Home = () => {
                             // changeLike={changeLike}
                             // articlesLikeState={articlesLikeState}
                             startId={startId}
+                            articlesPerPage={4}
                         />
                     </Grid>
                     <Grid item xs={4}>

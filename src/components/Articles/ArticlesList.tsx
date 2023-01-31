@@ -12,11 +12,12 @@ type ArticleProps = {
 }
 
 type Props = {    
-    startId: number
+    startId: number,
+    articlesPerPage: number
 }
 
 
-const ArticlesList = ({  startId }: Props) => {
+const ArticlesList = ({  startId, articlesPerPage }: Props) => {
     // console.log((articlesArray[6].category))
     return (
         <>
@@ -28,10 +29,11 @@ const ArticlesList = ({  startId }: Props) => {
                 spacing={4}
             >
                 {articlesArray
-                    .filter(
-                        (filtered) =>
-                            filtered.id >= startId && filtered.id <= startId + 3
-                    )
+                    // .filter(
+                    //     (filtered) =>
+                    //         filtered.id >= startId && filtered.id <= startId + 3
+                    // )
+                    .slice(startId-1, startId+articlesPerPage-1)
                     .map(
                         ({
                             id,
