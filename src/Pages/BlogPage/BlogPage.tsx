@@ -37,6 +37,8 @@ const BlogPage = () => {
         }
     }
 
+
+    // for pagination
     const [page, setPage] = React.useState(1)
     const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
         setPage(value)       
@@ -64,8 +66,8 @@ const BlogPage = () => {
                 {/* {articlesArray.map( */}
                 {articlesArray
                     .slice(
-                        (page - 1) * 6 + 1 - 1,
-                        (page - 1) * 6 + 1 + articlesPerPage - 1
+                        (page - 1) * articlesPerPage + 1 - 1,
+                        (page - 1) * articlesPerPage + 1 + articlesPerPage - 1
                     )
                     .map(
                         ({
