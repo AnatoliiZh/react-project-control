@@ -14,6 +14,10 @@ type ArticleProps = {
     image: string
 }
 
+type TypeSearch = {
+    text: string
+}
+
 // type Props = {
 //     changeLike: (id: number) => void
 //     articlesLikeState: ArticlesLikeState
@@ -39,6 +43,20 @@ const BlogPage = () => {
         ) {
             arrPag[index] = index + 1
         }
+    }
+
+    const [query, setQuery] = useState('')
+
+    const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const enteredName = event.target.value
+        setQuery(enteredName)
+    }
+
+    const search = () => {
+        //   const foundItems = PRODUCTS.filter((item) =>
+        //     item.name.toLowerCase().includes(query.toLowerCase())
+        //   );
+        //   setResult(foundItems);
     }
 
     return (
@@ -94,6 +112,16 @@ const BlogPage = () => {
                 )}
             </div>
             <ButtonToTop />
+            <div className="wrapper">
+                <input
+                    value={query}
+                    onChange={inputHandler}
+                    placeholder="Search products"
+                    className="input"
+                />
+
+                <button onClick={search}>Search</button>
+            </div>
         </Container>
     )
 }
