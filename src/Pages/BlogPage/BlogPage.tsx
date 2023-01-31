@@ -45,6 +45,8 @@ const BlogPage = () => {
         }
     }
 
+    console.log(startId)
+
     // const [query, setQuery] = useState('')
 
     // const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -78,36 +80,43 @@ const BlogPage = () => {
                                 .indexOf(query.toLowerCase()) !== -1
                     )
                     .map( */}
-                {articlesArray.map(
-                    ({
-                        id,
-                        title,
-                        category,
-                        date,
-                        comments,
-                        image,
-                    }: ArticleProps) => (
-                        <Grid item xs={12} sm={4} md={4} key={id}>
-                            <ArticlesListItem
-                                id={id}
-                                title={title}
-                                category={category}
-                                date={date}
-                                comments={comments}
-                                image={image}
+                {/* {articlesArray.map( */}
+                {articlesArray
+                    .slice(startId - 1, startId + articlesPerPage - 1)
+                    .map(
+                        ({
+                            id,
+                            title,
+                            category,
+                            date,
+                            comments,
+                            image,
+                        }: ArticleProps) => (
+                            <Grid item xs={12} sm={4} md={4} key={id}>
+                                <ArticlesListItem
+                                    id={id}
+                                    title={title}
+                                    category={category}
+                                    date={date}
+                                    comments={comments}
+                                    image={image}
 
-                                // changeLike={changeLike}
-                                // articlesLikeState={articlesLikeState}
-                            />
-                        </Grid>
-                    )
-                )}
+                                    // changeLike={changeLike}
+                                    // articlesLikeState={articlesLikeState}
+                                />
+                            </Grid>
+                        )
+                    )}
             </Grid>
             <div className="pagination">
                 {articlesArray.length / articlesPerPage > 1 && (
                     <div>
                         {arrPag.map((item) => (
-                            <button className="btn-pagination" key={item}>
+                            <button
+                                className="btn-pagination"
+                                key={item}
+                                onClick={() => setStartId((item - 1) * 6 + 1)}
+                            >
                                 {item}
                             </button>
                         ))}
