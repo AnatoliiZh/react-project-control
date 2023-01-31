@@ -45,19 +45,19 @@ const BlogPage = () => {
         }
     }
 
-    const [query, setQuery] = useState('')
+    // const [query, setQuery] = useState('')
 
-    const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const enteredName = event.target.value
-        setQuery(enteredName)
-    }
+    // const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    //     const enteredName = event.target.value
+    //     setQuery(enteredName)
+    // }
 
-    const search = () => {
-        //   const foundItems = PRODUCTS.filter((item) =>
-        //     item.name.toLowerCase().includes(query.toLowerCase())
-        //   );
-        //   setResult(foundItems);
-    }
+    // const search = () => {
+    //     //   const foundItems = PRODUCTS.filter((item) =>
+    //     //     item.name.toLowerCase().includes(query.toLowerCase())
+    //     //   );
+    //     //   setResult(foundItems);
+    // }
 
     return (
         <Container maxWidth="lg">
@@ -70,49 +70,52 @@ const BlogPage = () => {
                 alignItems="center"
                 spacing={4}
             >
-                {articlesArray
+                {/* {articlesArray
                     .filter(
                         (filtered) =>
-                            filtered.category
+                            filtered.title
                                 .toLowerCase()
-                                .indexOf('fa'.toLowerCase()) !== -1
+                                .indexOf(query.toLowerCase()) !== -1
                     )
-                    .map(
-                        // {articlesArray.map(
-                        ({
-                            id,
-                            title,
-                            category,
-                            date,
-                            comments,
-                            image,
-                        }: ArticleProps) => (
-                            <Grid item xs={12} sm={4} md={4} key={id}>
-                                <ArticlesListItem
-                                    id={id}
-                                    title={title}
-                                    category={category}
-                                    date={date}
-                                    comments={comments}
-                                    image={image}
-                                    // changeLike={changeLike}
-                                    // articlesLikeState={articlesLikeState}
-                                />
-                            </Grid>
-                        )
-                    )}
+                    .map( */}
+                {articlesArray.map(
+                    ({
+                        id,
+                        title,
+                        category,
+                        date,
+                        comments,
+                        image,
+                    }: ArticleProps) => (
+                        <Grid item xs={12} sm={4} md={4} key={id}>
+                            <ArticlesListItem
+                                id={id}
+                                title={title}
+                                category={category}
+                                date={date}
+                                comments={comments}
+                                image={image}
+
+                                // changeLike={changeLike}
+                                // articlesLikeState={articlesLikeState}
+                            />
+                        </Grid>
+                    )
+                )}
             </Grid>
             <div className="pagination">
                 {articlesArray.length / articlesPerPage > 1 && (
                     <div>
                         {arrPag.map((item) => (
-                            <button className="btn-pagination">{item}</button>
+                            <button className="btn-pagination" key={item}>
+                                {item}
+                            </button>
                         ))}
                     </div>
                 )}
             </div>
             <ButtonToTop />
-            <div className="wrapper">
+            {/* <div className="wrapper">
                 <input
                     value={query}
                     onChange={inputHandler}
@@ -121,7 +124,7 @@ const BlogPage = () => {
                 />
 
                 <button onClick={search}>Search</button>
-            </div>
+            </div> */}
         </Container>
     )
 }
