@@ -11,13 +11,13 @@ type ArticleProps = {
     image: string
 }
 
-type Props = {    
-    startId: number,
+type Props = {
+    startId: number
     articlesPerPage: number
+    query: string
 }
 
-
-const ArticlesList = ({  startId, articlesPerPage }: Props) => {
+const ArticlesList = ({ startId, articlesPerPage, query }: Props) => {
     // console.log((articlesArray[6].category))
     return (
         <>
@@ -28,34 +28,59 @@ const ArticlesList = ({  startId, articlesPerPage }: Props) => {
                 alignItems="center"
                 spacing={4}
             >
-                {articlesArray
-                    // .filter(
-                    //     (filtered) =>
-                    //         filtered.id >= startId && filtered.id <= startId + 3
-                    // )
-                    .slice(startId-1, startId+articlesPerPage-1)
-                    .map(
-                        ({
-                            id,
-                            title,
-                            category,
-                            date,
-                            comments,
-                            image,
-                        }: ArticleProps) => (
-                            <Grid item xs={12} sm={6} md={6} key={id}>
-                                <ArticlesListItem
-                                    id={id}
-                                    title={title}
-                                    category={category}
-                                    date={date}
-                                    comments={comments}
-                                    image={image}
-                                    
-                                />
-                            </Grid>
+                {query === '' &&
+                    articlesArray
+                        .slice(startId - 1, startId + articlesPerPage - 1)
+                        .map(
+                            ({
+                                id,
+                                title,
+                                category,
+                                date,
+                                comments,
+                                image,
+                            }: ArticleProps) => (
+                                <Grid item xs={12} sm={6} md={6} key={id}>
+                                    <ArticlesListItem
+                                        id={id}
+                                        title={title}
+                                        category={category}
+                                        date={date}
+                                        comments={comments}
+                                        image={image}
+                                    />
+                                </Grid>
+                            )
+                        )}
+                {query !== '' &&
+                    articlesArray
+                        .filter(
+                            (filtered) =>
+                                filtered.title
+                                    .toLowerCase()
+                                    .indexOf(query.toLowerCase()) !== -1
                         )
-                    )}
+                        .map(
+                            ({
+                                id,
+                                title,
+                                category,
+                                date,
+                                comments,
+                                image,
+                            }: ArticleProps) => (
+                                <Grid item xs={12} sm={6} md={6} key={id}>
+                                    <ArticlesListItem
+                                        id={id}
+                                        title={title}
+                                        category={category}
+                                        date={date}
+                                        comments={comments}
+                                        image={image}
+                                    />
+                                </Grid>
+                            )
+                        )}
             </Grid>
         </>
     )

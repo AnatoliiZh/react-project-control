@@ -1,3 +1,4 @@
+import React from 'react'
 import Button from '@mui/material/Button'
 import { NavLink } from 'react-router-dom'
 import './MenuItem.scss'

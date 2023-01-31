@@ -6,10 +6,7 @@ import ArticlesInOneCategoryItem from './ArticlesInOneCategoryItem'
 
 type Props = {
     category: string
-    
 }
-
-
 
 type ArticleProps = {
     id: number
@@ -21,10 +18,17 @@ type ArticleProps = {
     description?: string
 }
 
-const ArticlesInOneCategory = ({  category }: Props) => {
+const ArticlesInOneCategory = ({ category }: Props) => {
     return (
         <div className="category">
-            
+            {/* {articlesArray
+                                .filter(
+                                    (filtered) =>
+                                        filtered.title
+                                            .toLowerCase()
+                                            .indexOf(query.toLowerCase()) !== -1
+                                )
+                                .map( */}
             {articlesArray
                 .filter((filtered) => filtered.category === category)
                 .map(
@@ -45,7 +49,6 @@ const ArticlesInOneCategory = ({  category }: Props) => {
                             comments={comments}
                             image={image}
                             description={description}
-                            
                             key={id}
                         />
                     )

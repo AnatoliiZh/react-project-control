@@ -100,6 +100,7 @@ const Home = () => {
                             // articlesLikeState={articlesLikeState}
                             startId={startId}
                             articlesPerPage={4}
+                            query=""
                         />
                     </Grid>
                     <Grid item xs={4}>
