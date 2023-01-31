@@ -4,6 +4,8 @@ import articlesArray from 'utils/articlesArray'
 import { Container, Grid } from '@mui/material'
 import 'Pages/Pages.scss'
 import ButtonToTop from 'components/ButtonToTop/ButtonToTop'
+import Pagination from '@mui/material/Pagination'
+import Stack from '@mui/material/Stack'
 
 type ArticleProps = {
     id: number
@@ -45,6 +47,12 @@ const BlogPage = () => {
         }
     }
 
+    const [page, setPage] = React.useState(1)
+    const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+        setPage(value)
+        // setStartId((page - 1) * 6 + 1)
+    }
+
     console.log(startId)
 
     // const [query, setQuery] = useState('')
@@ -82,7 +90,10 @@ const BlogPage = () => {
                     .map( */}
                 {/* {articlesArray.map( */}
                 {articlesArray
-                    .slice(startId - 1, startId + articlesPerPage - 1)
+                    .slice(
+                        (page - 1) * 6 + 1 - 1,
+                        (page - 1) * 6 + 1 + articlesPerPage - 1
+                    )
                     .map(
                         ({
                             id,
@@ -108,7 +119,7 @@ const BlogPage = () => {
                         )
                     )}
             </Grid>
-            <div className="pagination">
+            {/* <div className="pagination">
                 {articlesArray.length / articlesPerPage > 1 && (
                     <div>
                         {arrPag.map((item) => (
@@ -122,7 +133,7 @@ const BlogPage = () => {
                         ))}
                     </div>
                 )}
-            </div>
+            </div> */}
             <ButtonToTop />
             {/* <div className="wrapper">
                 <input
@@ -134,6 +145,15 @@ const BlogPage = () => {
 
                 <button onClick={search}>Search</button>
             </div> */}
+            <Stack spacing={2}>
+                <div className="pagination">
+                    <Pagination
+                        count={articlesArray.length % articlesPerPage}
+                        page={page}
+                        onChange={handleChange}
+                    />
+                </div>
+            </Stack>
         </Container>
     )
 }
