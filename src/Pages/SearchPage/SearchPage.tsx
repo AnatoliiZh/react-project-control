@@ -9,7 +9,8 @@ import ButtonToTop from 'components/ButtonToTop/ButtonToTop'
 // import ArticlesList from 'components/Articles/ArticlesList'
 import articlesArray from 'utils/articlesArray'
 import ArticlesListItem from 'components/Articles/ArticlesListItem'
-import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import {useAppSelector } from 'redux/hooks'
+// import ArticlesList from 'components/Articles/ArticlesList'
 
 type Props = {
     // query?:string
@@ -25,15 +26,15 @@ type ArticleProps = {
 }
 
 
-const SearchPage = (props: Props) => {
-    // const query1 = 'qu'
+const SearchPage = (props: Props) => {   
 
-    const query2 = useAppSelector((state) => state.searchText)
-    // const dispatch = useAppDispatch() 
+    const query = useAppSelector((state) => state.searching.searchText)
+    
 
   return (
     <Container maxWidth="lg">
-    <div className="title" >Search : {query2}</div>
+    <div className="title" >Search : {query}</div>
+    
     <Grid
                 container
                 direction="row"
@@ -42,7 +43,12 @@ const SearchPage = (props: Props) => {
                 spacing={4}
             >
                
-                {articlesArray.map( 
+                 {articlesArray.filter(
+                            (filtered) =>
+                                filtered.title
+                                    .toLowerCase()
+                                    .indexOf(query.toLowerCase()) !== -1
+                        ).map( 
                         ({
                             id,
                             title,
@@ -63,7 +69,8 @@ const SearchPage = (props: Props) => {
                                 />
                             </Grid>
                         )
-                    )}
+                    )} 
+                   
             </Grid>
     <ButtonToTop />
 </Container>

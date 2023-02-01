@@ -6,6 +6,7 @@ import Toolbar from '@mui/material/Toolbar'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 import SearchIcon from '@mui/icons-material/Search'
+import ClearIcon from '@mui/icons-material/Clear';
 // import MoreIcon from '@mui/icons-material/MoreVert'
 
 import { FaTwitter } from 'react-icons/fa'
@@ -17,8 +18,8 @@ import './Header.scss'
 import Container from '@mui/material/Container'
 import Menu from 'components/Menu/Menu'
 import { Link } from 'react-router-dom'
-import { useAppDispatch} from 'redux/hooks'
-import { setSearchText } from 'redux/searchReducer'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { updateSearchText } from 'redux/searchReducer'
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     alignItems: 'flex-start',
@@ -32,21 +33,23 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 type Props = {}
 const Header = (props: Props) => {
-    const [query, setQuery] = useState('')
+    // const [query, setQuery] = useState('')
     const [isShowInput, setIsShowInput] = useState(true)
 
 
-    const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const enteredText = event.target.value
-        setQuery(enteredText)
-    }
+    // const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    //     const enteredText = event.target.value
+    //     // setQuery(enteredText)
+    // }
 
     const search = () => {
         setIsShowInput(!isShowInput)
+        dispatch(updateSearchText(''))
 
     }
 
     const dispatch = useAppDispatch()
+    const query = useAppSelector((state) => state.searching.searchText)
 
     return (
         <>
@@ -150,6 +153,7 @@ const Header = (props: Props) => {
                                 />
                             </Box>
                         </a>
+                        
 
                         <Typography
                             variant="h3"
@@ -172,14 +176,11 @@ const Header = (props: Props) => {
                                         className="search-input"
                                         value={query}
                                         // onChange={inputHandler}
-                                        onChange={() => dispatch(setSearchText(inputHandler))}
+                                        onChange={(e) => dispatch(updateSearchText(e.target.value))}
                                         placeholder="Search in the titles..."
                                     />
-                                    )}
-                           
-
-                            
-                                <Link to="/search">
+                            )} 
+                            <Link to="/search">
                                         <IconButton
                                         size="large"
                                         aria-label="search"
@@ -195,11 +196,10 @@ const Header = (props: Props) => {
                                         }}
                                         onClick={search}
                                     >
-                                        
-                                        <SearchIcon />
+                                        {isShowInput ?  <ClearIcon/> :  <SearchIcon /> }
                                         
                                     </IconButton>
-                                </Link>
+                            </Link>
                         </div>
                     </StyledToolbar>
                     <Menu />

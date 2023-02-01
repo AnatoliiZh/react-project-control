@@ -5,7 +5,7 @@ import searchReducer from './searchReducer'
 export const store = configureStore({
     reducer: {
         likeArticles: likeReducer,
-        searchText: searchReducer
+        searching: searchReducer
     },
   })
 
