@@ -12,9 +12,7 @@
 .menu{
     display: flex;
     justify-content: center;
-    .menu-inside{
-        
-    }
+    
     
 }
 
@@ -26,3 +24,23 @@
     text-transform: capitalize;
 }
 
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    .search-input{
+        background-color: #ffffff;
+        height: 50px;
+        padding: 6px 15px;
+        border: 1px solid #e4e4e4;
+        width: 76%;        
+        border-radius: 12px;
+        font-size: 15px;
+        font-weight: 700;
+        outline: 0;
+    }
+
+    .search-input::placeholder {
+        font-weight: 500;        
+    }
+}

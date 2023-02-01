@@ -1,4 +1,4 @@
-
+import React from 'react'
 import Home from 'Pages/Home/Home'
 import { Routes, Route } from 'react-router-dom'
 import 'swiper/css/bundle'
@@ -8,7 +8,9 @@ import BlogPage from 'Pages/BlogPage/BlogPage'
 import ReviewPage from 'Pages/ReviewPage/ReviewPage'
 import ArticlePage from 'Pages/ArticlePage/ArticlePage'
 import CategoryPage from 'Pages/CategoryPage/CategoryPage'
+import SearchPage from 'Pages/SearchPage/SearchPage'
 
+// const [query, setQuery] = useState('')
 
 const Main = () => {
     return (      
@@ -23,6 +25,7 @@ const Main = () => {
             <Route path="reviews" element={<ReviewPage />} />
             <Route path="blog" element={<BlogPage/>}/>
             <Route path="favorite" element={ <FavoritePage />} />
+            <Route path="search" element={ <SearchPage />} />
             <Route path="articles/:id"  element={<ArticlePage />} />
         </Routes>
 

@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import likeReducer from './likeReducer'
+import searchReducer from './searchReducer'
 
 export const store = configureStore({
     reducer: {
-        likeArticles: likeReducer
+        likeArticles: likeReducer,
+        searchText: searchReducer
     },
   })
 

@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import { styled } from '@mui/material/styles'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
@@ -15,6 +16,9 @@ import { FaInstagram } from 'react-icons/fa'
 import './Header.scss'
 import Container from '@mui/material/Container'
 import Menu from 'components/Menu/Menu'
+import { Link } from 'react-router-dom'
+import { useAppDispatch} from 'redux/hooks'
+import { setSearchText } from 'redux/searchReducer'
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     alignItems: 'flex-start',
@@ -28,6 +32,22 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 type Props = {}
 const Header = (props: Props) => {
+    const [query, setQuery] = useState('')
+    const [isShowInput, setIsShowInput] = useState(true)
+
+
+    const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const enteredText = event.target.value
+        setQuery(enteredText)
+    }
+
+    const search = () => {
+        setIsShowInput(!isShowInput)
+
+    }
+
+    const dispatch = useAppDispatch()
+
     return (
         <>
             <AppBar
@@ -146,22 +166,41 @@ const Header = (props: Props) => {
                         >
                             Alino
                         </Typography>
-                        <IconButton
-                            size="large"
-                            aria-label="search"
-                            color="inherit"
-                            sx={{ alignSelf: 'center' }}
-                            style={{
-                                height: '50px',
-                                width: '50px',
-                                color: 'white',
-                                backgroundColor: '#bd9b84',
-                                borderRadius: '50%',
-                                padding: '6px',
-                            }}
-                        >
-                            <SearchIcon />
-                        </IconButton>
+                        <div className='search-box'>
+                            {isShowInput && (
+                                        <input
+                                        className="search-input"
+                                        value={query}
+                                        // onChange={inputHandler}
+                                        onChange={() => dispatch(setSearchText(inputHandler))}
+                                        placeholder="Search in the titles..."
+                                    />
+                                    )}
+                           
+
+                            
+                                <Link to="/search">
+                                        <IconButton
+                                        size="large"
+                                        aria-label="search"
+                                        color="inherit"
+                                        sx={{ alignSelf: 'center' }}
+                                        style={{
+                                            height: '50px',
+                                            width: '50px',
+                                            color: 'white',
+                                            backgroundColor: '#bd9b84',
+                                            borderRadius: '50%',
+                                            padding: '6px',
+                                        }}
+                                        onClick={search}
+                                    >
+                                        
+                                        <SearchIcon />
+                                        
+                                    </IconButton>
+                                </Link>
+                        </div>
                     </StyledToolbar>
                     <Menu />
                 </Container>
