@@ -20,6 +20,7 @@ import Menu from 'components/Menu/Menu'
 import { Link } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { updateSearchText } from 'redux/searchReducer'
+// import Demo from 'components/Demo/Demo'
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     alignItems: 'flex-start',
@@ -76,6 +77,7 @@ const Header = (props: Props) => {
                 }}
             >
                 <Container maxWidth="lg">
+                    {/* <Demo /> */}
                     <StyledToolbar
                         style={{
                             margin: '0 0 20px 0',
