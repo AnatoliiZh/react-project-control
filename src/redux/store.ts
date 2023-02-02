@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
+import inputReducer from './inputReducer'
 import likeReducer from './likeReducer'
 import searchReducer from './searchReducer'
 
 export const store = configureStore({
     reducer: {
         likeArticles: likeReducer,
-        searching: searchReducer
+        searching: searchReducer,
+        inputShow: inputReducer
     },
   })
 

@@ -20,6 +20,7 @@ import Menu from 'components/Menu/Menu'
 import { Link } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { updateSearchText } from 'redux/searchReducer'
+import { toggleInputShow } from 'redux/inputReducer'
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     alignItems: 'flex-start',
@@ -34,7 +35,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 type Props = {}
 const Header = (props: Props) => {
     // const [query, setQuery] = useState('')
-    const [isShowInput, setIsShowInput] = useState(true)
+    const [isShowInput, setIsShowInput] = useState(false)
 
 
     // const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -42,14 +43,28 @@ const Header = (props: Props) => {
     //     // setQuery(enteredText)
     // }
 
+    // const [fieldValue, setFieldValue] = React.useState('');
+//   const handleBlur = (e) => setFieldValue(e.target.value);
+//   console.log(fieldValue);
+
+    const blurHaandler = (event: React.FocusEvent<HTMLInputElement>) => {
+        setIsShowInput(false)
+        console.log(isShowInput)
+    }
+
+
+
     const search = () => {
         setIsShowInput(!isShowInput)
+        // dispatch(toggleInputShow(isShowInput))
+
         dispatch(updateSearchText(''))
 
     }
 
     const dispatch = useAppDispatch()
     const query = useAppSelector((state) => state.searching.searchText)
+    // const isShowInput = useAppSelector((state) => state.inputShow.isShowInput)
 
     return (
         <>
@@ -177,6 +192,7 @@ const Header = (props: Props) => {
                                         value={query}
                                         // onChange={inputHandler}
                                         onChange={(e) => dispatch(updateSearchText(e.target.value))}
+                                        onBlur={blurHaandler}
                                         placeholder="Search in the titles..."
                                     />
                             )} 

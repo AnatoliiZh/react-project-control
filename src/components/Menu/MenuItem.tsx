@@ -3,14 +3,17 @@ import Button from '@mui/material/Button'
 import { NavLink } from 'react-router-dom'
 import './MenuItem.scss'
 
+
 type Props = {
     to: string
     children: React.ReactNode
 }
 
 const MenuItem = ({ to, children }: Props) => {
+    // const dispatch = useAppDispatch()
+    // const isShowInput = useAppSelector((state) => state.inputShow.isShowInput)
     return (
-        <Button color="inherit">
+        <Button color="inherit" >
             <NavLink
                 className={({ isActive }) =>
                     isActive ? 'nav-active' : 'nav-item'
