@@ -19,15 +19,11 @@ const Categories = (props: Props) => {
         }
     }
 
-
-      
     // for (let key1 in arrCategory) {
-    //     console.log(arrCategory[key1])        
+    //     console.log(arrCategory[key1])
     // }
-    
-    // console.log(arrCategory[Object.keys(arrCategory)[0]])
 
-    
+    // console.log(arrCategory[Object.keys(arrCategory)[0]])
 
     return (
         <div className="categories">
@@ -35,15 +31,15 @@ const Categories = (props: Props) => {
                 <div className="categories-title">Categories</div>
                 <div className="categories-line"></div>
             </div>
-            
-            {Object.keys(arrCategory).map((item)  => ( 
-                <div className="categories-box">
-                <div className="categories-name">
-                    <LinkItem to={`/${item}`}>{item}</LinkItem>
-                </div>
-                <div className="categories-quantity">
-                    <span>{arrCategory[item]} </span>
-                </div>
+
+            {Object.keys(arrCategory).map((item) => (
+                <div className="categories-box" key={item}>
+                    <div className="categories-name">
+                        <LinkItem to={`/${item}`}>{item}</LinkItem>
+                    </div>
+                    <div className="categories-quantity">
+                        <span>{arrCategory[item]} </span>
+                    </div>
                 </div>
             ))}
         </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { styled } from '@mui/material/styles'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
@@ -20,7 +20,7 @@ import Menu from 'components/Menu/Menu'
 import { Link } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { updateSearchText } from 'redux/searchReducer'
-// import Demo from 'components/Demo/Demo'
+import ClickAwayListener from '@mui/base/ClickAwayListener'
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     alignItems: 'flex-start',
@@ -34,36 +34,20 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 type Props = {}
 const Header = (props: Props) => {
-    // const [query, setQuery] = useState('')
-    const [isShowInput, setIsShowInput] = useState(false)
-
-    // const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //     const enteredText = event.target.value
-    //     // setQuery(enteredText)
-    // }
-
-    // const [fieldValue, setFieldValue] = React.useState('');
-    //   const handleBlur = (e) => setFieldValue(e.target.value);
-    //   console.log(fieldValue);
-
-    // const blurHaandler = (event: React.FocusEvent<HTMLInputElement>) => {
-    //     setIsShowInput(false)
-    //     console.log(isShowInput)
-    // }
-
-    const search = () => {
-        setIsShowInput(!isShowInput)
-        // dispatch(toggleInputShow(isShowInput))
-
-        dispatch(updateSearchText(''))
-        // setTimeout(() => {
-        //     setIsShowInput(false)
-        // }, 3000)
-    }
-
     const dispatch = useAppDispatch()
     const query = useAppSelector((state) => state.searching.searchText)
-    // const isShowInput = useAppSelector((state) => state.inputShow.isShowInput)
+
+    const [open, setOpen] = useState(false)
+
+    const handleClick = () => {
+        setOpen((prev) => !prev)
+    }
+
+    const handleClickAway = () => {
+        setOpen(false)
+    }
+
+    // console.log(open)
 
     return (
         <>
@@ -184,62 +168,51 @@ const Header = (props: Props) => {
                         >
                             Alino
                         </Typography>
-                        <div className="search-box">
-                            {isShowInput && (
-                                <input
-                                    className="search-input"
-                                    value={query}
-                                    // onChange={inputHandler}
-                                    onChange={(e) =>
-                                        dispatch(
-                                            updateSearchText(e.target.value)
-                                        )
-                                    }
-                                    onBlur={() => setIsShowInput(false)}
-                                    placeholder="Search in the titles..."
-                                />
-                            )}
-                            {isShowInput ? (
-                                <Link to="/">
-                                    <IconButton
-                                        size="large"
-                                        aria-label="search"
-                                        color="inherit"
-                                        sx={{ alignSelf: 'center' }}
-                                        style={{
-                                            height: '50px',
-                                            width: '50px',
-                                            color: 'white',
-                                            backgroundColor: '#bd9b84',
-                                            borderRadius: '50%',
-                                            padding: '6px',
-                                        }}
-                                        onClick={search}
-                                    >
-                                        <ClearIcon />
-                                    </IconButton>
-                                </Link>
-                            ) : (
-                                <Link to="/search">
-                                    <IconButton
-                                        size="large"
-                                        aria-label="search"
-                                        color="inherit"
-                                        sx={{ alignSelf: 'center' }}
-                                        style={{
-                                            height: '50px',
-                                            width: '50px',
-                                            color: 'white',
-                                            backgroundColor: '#bd9b84',
-                                            borderRadius: '50%',
-                                            padding: '6px',
-                                        }}
-                                        onClick={search}
-                                    >
-                                        <SearchIcon />
-                                    </IconButton>
-                                </Link>
-                            )}
+                        <div>
+                            <ClickAwayListener onClickAway={handleClickAway}>
+                                <div className="search-box">
+                                    {open ? (
+                                        <input
+                                            className="search-input"
+                                            value={query}
+                                            // onChange={inputHandler}
+                                            onChange={(e) =>
+                                                dispatch(
+                                                    updateSearchText(
+                                                        e.target.value
+                                                    )
+                                                )
+                                            }
+                                            // onBlur={() => setIsShowInput(false)}
+                                            placeholder="Search in the titles..."
+                                        />
+                                    ) : null}
+                                    <Link to={open ? '/' : '/search'}>
+                                        <IconButton
+                                            size="large"
+                                            aria-label="search"
+                                            color="inherit"
+                                            sx={{ alignSelf: 'center' }}
+                                            style={{
+                                                height: '50px',
+                                                width: '50px',
+                                                color: 'white',
+                                                backgroundColor: '#bd9b84',
+                                                borderRadius: '50%',
+                                                padding: '6px',
+                                            }}
+                                            // onClick={search}
+                                            onClick={handleClick}
+                                        >
+                                            {open ? (
+                                                <ClearIcon />
+                                            ) : (
+                                                <SearchIcon />
+                                            )}
+                                        </IconButton>
+                                    </Link>
+                                </div>
+                            </ClickAwayListener>
                         </div>
                     </StyledToolbar>
                     <Menu />
