@@ -18,7 +18,7 @@ const Main = () => {
         <Routes>
             <Route  path="/" element={<Home/>} />
             <Route path="about" element={<AboutPage />} />            
-            <Route path="fashion"  element={ <CategoryPage  category="Fashion"/> }  />
+            <Route path="fashion"  element={ <CategoryPage  category="Fashion" /> }  />
             <Route  path="health"  element={ <CategoryPage  category="Health" /> }  />
             <Route path="lifestyle" element={  <CategoryPage category="Lifestyle" /> }  />
             <Route   path="travel" element={ <CategoryPage  category="Travel" />  } />

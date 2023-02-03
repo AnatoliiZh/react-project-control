@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 
 import { Container } from '@mui/material'
 import { Grid } from '@mui/material'
@@ -9,41 +9,38 @@ import Categories from 'components/Categories/Categories'
 import SocialProfiles from 'components/SocialProfiles/SocialProfiles'
 import ButtonToTop from 'components/ButtonToTop/ButtonToTop'
 import ArticlesList from 'components/Articles/ArticlesList'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { updateSearchText } from 'redux/searchReducer'
 
-type Props = {
-    // changeLike: (id: number) => void
-    // articlesLikeState: ArticlesLikeState
-    category: string
+type Props = {    
+    category: string    
 }
-
-// type ArticlesLikeState = {
-//     [id: number]: boolean
-// }
 
 const CategoryPage = ({ category }: Props) => {
     useEffect(() => {
         // 👇️ scroll to top on page load
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
     }, [])
+    
+    // const [query, setQuery] = useState('')
 
-    const [query, setQuery] = useState('')
+    // const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    //     const enteredText = event.target.value
+    //     setQuery(enteredText)        
+    // }
 
-    const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const enteredText = event.target.value
-        setQuery(enteredText)
-    }
+    // const search = () => {        
+    //     setQuery('')
+    // }
 
-    const search = () => {
-        //   const foundItems = PRODUCTS.filter((item) =>
-        //     item.name.toLowerCase().includes(query.toLowerCase())
-        //   );
-        setQuery('')
-    }
+    const query = useAppSelector((state) => state.searching.searchText)
+    const dispatch = useAppDispatch()
+
 
     return (
         <Container maxWidth="lg">
             {query === '' && <div className="title">Category : {category}</div>}
-            {query !== '' && <div className="title">Search : {query}</div>}
+            {query !== '' && <div className="title">Search Results for : {query}</div>}
 
             <Grid container spacing={6}>
                 <Grid item xs={8}>
@@ -78,16 +75,26 @@ const CategoryPage = ({ category }: Props) => {
                             <input
                                 className="search-input"
                                 value={query}
-                                onChange={inputHandler}
+                                // onChange={inputHandler}
+                                onChange={(e) =>
+                                    dispatch(
+                                        updateSearchText(
+                                            e.target.value
+                                        )
+                                    )
+                                }
                                 placeholder="Search in the titles..."
                             />
                             {query === '' && (
-                                <button className="search-btn" onClick={search}>
+                                <button className="search-btn" >
                                     Search
                                 </button>
                             )}
                             {query !== '' && (
-                                <button className="search-btn" onClick={search}>
+                                <button className="search-btn" onClick={(e) =>
+                                    dispatch(
+                                        updateSearchText('')
+                                    )}>
                                     Clear
                                 </button>
                             )}

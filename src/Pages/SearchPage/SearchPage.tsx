@@ -29,7 +29,7 @@ const SearchPage = (props: Props) => {
 
     return (
         <Container maxWidth="lg">
-            <div className="title">Result of search : {query}</div>
+            <div className="title">Search Results for : {query}</div>
 
             <Grid
                 container
