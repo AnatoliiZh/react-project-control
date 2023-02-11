@@ -93,21 +93,28 @@ const Home = () => {
                         />
                     </div>
                 </div>
-                <Grid container spacing={2}>
-                    <Grid item xs={8}>
-                        <ArticlesList
-                            // changeLike={changeLike}
-                            // articlesLikeState={articlesLikeState}
-                            startId={startId}
-                            articlesPerPage={4}
-                            query=""
-                        />
+                <div className="articles-most">
+                    <Grid
+                        container
+                        spacing={2}
+                        columns={{ xs: 4, md: 12 }}
+                        className="art"
+                    >
+                        <Grid item xs={4} md={12}>
+                            <ArticlesList
+                                // changeLike={changeLike}
+                                // articlesLikeState={articlesLikeState}
+                                startId={startId}
+                                articlesPerPage={4}
+                                query=""
+                            />
+                        </Grid>
                     </Grid>
-                    <Grid item xs={4}>
+                    <div className="most">
                         <MostRead id1={3} id2={5} id3={6} id4={7} />
                         <Social />
-                    </Grid>
-                </Grid>
+                    </div>
+                </div>
                 <RecentMost />
                 <div className="banner">
                     <img src="/images/banner.jpg" width="" alt="ads" />
