@@ -20,7 +20,7 @@ type Props = {
     category: string
     date: string
     comments: number
-    image: string 
+    image: string
 }
 
 const ArticlesListItem = ({
@@ -31,7 +31,6 @@ const ArticlesListItem = ({
     comments,
     image,
 }: Props) => {
-   
     const isLiked = useAppSelector((state) => state.likeArticles[id])
     const dispatch = useAppDispatch()
 
@@ -46,31 +45,34 @@ const ArticlesListItem = ({
         >
             <CardContent
                 sx={{
-                    padding: '0',                    
+                    padding: '0',
                 }}
             >
                 <div className="gradient article-box-img">
-                    <img src={image}  alt="" />
+                    <img src={image} alt="" />
                 </div>
 
-                <div className="article-title"><Link to={`/articles/${id}`}>{title}</Link> </div>
+                <div className="article-title">
+                    <Link to={`/articles/${id}`}>{title}</Link>{' '}
+                </div>
                 <div className="under-title">
                     <div className="cat-date-com">
                         <div className="link-category">
                             <LinkItem to={`/${category}`}>{category}</LinkItem>
                         </div>
 
-                        
                         <DateComments date={date} comments={comments} />
                     </div>
-                    <div className="like" onClick={() => dispatch(toggleLikeState(id))}>
+                    <button
+                        className="like"
+                        onClick={() => dispatch(toggleLikeState(id))}
+                    >
                         {isLiked ? (
                             <FaHeart className="like-icon" />
                         ) : (
                             <FaRegHeart className="like-icon" />
                         )}
-                    </div>
-                    
+                    </button>
                 </div>
             </CardContent>
         </Card>
