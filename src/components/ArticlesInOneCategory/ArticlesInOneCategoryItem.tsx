@@ -18,7 +18,7 @@ type Props = {
     date: string
     comments: number
     image: string
-    description?: string    
+    description?: string
 }
 
 const ArticlesInOneCategoryItem = ({
@@ -29,7 +29,6 @@ const ArticlesInOneCategoryItem = ({
     comments,
     image,
     description,
-   
 }: Props) => {
     const articlesLikeState = useAppSelector((state) => state.likeArticles)
     const dispatch = useAppDispatch()
@@ -38,13 +37,16 @@ const ArticlesInOneCategoryItem = ({
         <div className="category-item">
             <div className="box">
                 <img src={image} alt="" />
-                <div className="like" onClick={() => dispatch(toggleLikeState(id))}>
-                        {articlesLikeState[id] ? (
-                            <FaHeart className="like-icon" />
-                        ) : (
-                            <FaRegHeart className="like-icon" />
-                        )}
-                </div>
+                <button
+                    className="like"
+                    onClick={() => dispatch(toggleLikeState(id))}
+                >
+                    {articlesLikeState[id] ? (
+                        <FaHeart className="like-icon" />
+                    ) : (
+                        <FaRegHeart className="like-icon" />
+                    )}
+                </button>
             </div>
             <LabelCategory category={category} />
             <div className="category-title">
@@ -63,7 +65,6 @@ const ArticlesInOneCategoryItem = ({
                     <ArrowForwardIcon className="category-continue-arrow" />
                 </div>
             </div>
-            
         </div>
     )
 }
